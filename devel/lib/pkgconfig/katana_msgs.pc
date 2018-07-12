@@ -1,0 +1,8 @@
+prefix=/home/hit_ter/rover_ws/devel
+
+Name: katana_msgs
+Description: Description of katana_msgs
+Version: 1.1.2
+Cflags: -I/home/hit_ter/rover_ws/devel/include
+Libs: -L/home/hit_ter/rover_ws/devel/lib 
+Requires: message_runtime sensor_msgs actionlib_msgs

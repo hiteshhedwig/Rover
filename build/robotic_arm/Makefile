@@ -391,6 +391,21 @@ actionlib_msgs_generate_messages_lisp/fast:
 .PHONY : actionlib_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
+robotic_arm/CMakeFiles/robotic_arm.dir/rule:
+	cd /home/hit_ter/rover_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotic_arm/CMakeFiles/robotic_arm.dir/rule
+.PHONY : robotic_arm/CMakeFiles/robotic_arm.dir/rule
+
+# Convenience name for target.
+robotic_arm: robotic_arm/CMakeFiles/robotic_arm.dir/rule
+
+.PHONY : robotic_arm
+
+# fast build rule for target.
+robotic_arm/fast:
+	cd /home/hit_ter/rover_ws/build && $(MAKE) -f robotic_arm/CMakeFiles/robotic_arm.dir/build.make robotic_arm/CMakeFiles/robotic_arm.dir/build
+.PHONY : robotic_arm/fast
+
+# Convenience name for target.
 robotic_arm/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule:
 	cd /home/hit_ter/rover_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotic_arm/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
 .PHONY : robotic_arm/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
@@ -555,6 +570,33 @@ rosgraph_msgs_generate_messages_cpp/fast:
 	cd /home/hit_ter/rover_ws/build && $(MAKE) -f robotic_arm/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make robotic_arm/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
+src/ikine_6dof.o: src/ikine_6dof.cpp.o
+
+.PHONY : src/ikine_6dof.o
+
+# target to build an object file
+src/ikine_6dof.cpp.o:
+	cd /home/hit_ter/rover_ws/build && $(MAKE) -f robotic_arm/CMakeFiles/robotic_arm.dir/build.make robotic_arm/CMakeFiles/robotic_arm.dir/src/ikine_6dof.cpp.o
+.PHONY : src/ikine_6dof.cpp.o
+
+src/ikine_6dof.i: src/ikine_6dof.cpp.i
+
+.PHONY : src/ikine_6dof.i
+
+# target to preprocess a source file
+src/ikine_6dof.cpp.i:
+	cd /home/hit_ter/rover_ws/build && $(MAKE) -f robotic_arm/CMakeFiles/robotic_arm.dir/build.make robotic_arm/CMakeFiles/robotic_arm.dir/src/ikine_6dof.cpp.i
+.PHONY : src/ikine_6dof.cpp.i
+
+src/ikine_6dof.s: src/ikine_6dof.cpp.s
+
+.PHONY : src/ikine_6dof.s
+
+# target to generate assembly for a file
+src/ikine_6dof.cpp.s:
+	cd /home/hit_ter/rover_ws/build && $(MAKE) -f robotic_arm/CMakeFiles/robotic_arm.dir/build.make robotic_arm/CMakeFiles/robotic_arm.dir/src/ikine_6dof.cpp.s
+.PHONY : src/ikine_6dof.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -582,6 +624,7 @@ help:
 	@echo "... actionlib_msgs_generate_messages_py"
 	@echo "... actionlib_msgs_generate_messages_lisp"
 	@echo "... rebuild_cache"
+	@echo "... robotic_arm"
 	@echo "... actionlib_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_lisp"
@@ -594,6 +637,9 @@ help:
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
+	@echo "... src/ikine_6dof.o"
+	@echo "... src/ikine_6dof.i"
+	@echo "... src/ikine_6dof.s"
 .PHONY : help
 
 

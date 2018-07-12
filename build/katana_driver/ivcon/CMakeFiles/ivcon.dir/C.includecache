@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/hit_ter/rover_ws/src/katana_driver/ivcon/src/ivcon.c
+ctype.h
+-
+math.h
+-
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+colors.inc
+/home/hit_ter/rover_ws/src/katana_driver/ivcon/src/colors.inc
+shapes.inc
+/home/hit_ter/rover_ws/src/katana_driver/ivcon/src/shapes.inc
+

@@ -49,6 +49,7 @@
 /home/hit_ter/rover_ws/build/robotic_arm/CMakeFiles/actionlib_msgs_generate_messages_py.dir
 /home/hit_ter/rover_ws/build/robotic_arm/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir
 /home/hit_ter/rover_ws/build/robotic_arm/CMakeFiles/rebuild_cache.dir
+/home/hit_ter/rover_ws/build/robotic_arm/CMakeFiles/robotic_arm.dir
 /home/hit_ter/rover_ws/build/robotic_arm/CMakeFiles/actionlib_generate_messages_nodejs.dir
 /home/hit_ter/rover_ws/build/robotic_arm/CMakeFiles/std_msgs_generate_messages_lisp.dir
 /home/hit_ter/rover_ws/build/robotic_arm/CMakeFiles/roscpp_generate_messages_lisp.dir

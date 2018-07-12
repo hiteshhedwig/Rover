@@ -1,0 +1,8 @@
+prefix=/home/hit_ter/rover_ws/install
+
+Name: katana_tutorials
+Description: Description of katana_tutorials
+Version: 1.1.2
+Cflags: -I/home/hit_ter/rover_ws/install/include
+Libs: -L/home/hit_ter/rover_ws/install/lib 
+Requires: roscpp actionlib trajectory_msgs control_msgs sensor_msgs

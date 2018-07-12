@@ -1,0 +1,8 @@
+prefix=/home/hit_ter/rover_ws/install
+
+Name: katana_arm_gazebo
+Description: Description of katana_arm_gazebo
+Version: 1.1.2
+Cflags: 
+Libs: -L/home/hit_ter/rover_ws/install/lib 
+Requires: roscpp gazebo_ros urdf xacro robot_state_publisher katana_description controller_manager katana_gazebo_plugins joint_trajectory_controller actionlib controller_manager_msgs std_msgs

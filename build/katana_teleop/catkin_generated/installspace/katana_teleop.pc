@@ -1,0 +1,8 @@
+prefix=/home/hit_ter/rover_ws/install
+
+Name: katana_teleop
+Description: Description of katana_teleop
+Version: 1.1.2
+Cflags: -I/home/hit_ter/rover_ws/install/include
+Libs: -L/home/hit_ter/rover_ws/install/lib 
+Requires: roscpp actionlib control_msgs sensor_msgs katana_msgs

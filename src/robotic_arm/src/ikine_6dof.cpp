@@ -13,6 +13,17 @@
 #include "complexTimes.h"
 #include "sqrt1.h"
 #include "ikine_6dof_rtwutil.h"
+#include "ros/ros.h"
+#include <cmath>
+//#include <std_msgs/Float64>
+#include <sstream>
+#include <iostream>
+using namespace std;
+using namespace ros;
+
+//robotic_Arm::spose& send;//create msgs
+//robotic_Arm::rpose& recieve;//create msgs
+
 
 // Function Definitions
 
@@ -32,18 +43,21 @@
 //                creal_T theta[6]
 // Return Type  : void
 //
-void ikine_6dof(double X, double Y, double Z, double r, double p, double y,
-                double a1, double a2, double a3, creal_T theta[6])
-{
+void ikine_6dof(double X, double Y, double Z, double x, double y, double z,
+                double a1, double a2, double a3)
+{ creal_T theta[6];
+ 
   double theta1;
   double r3;
   double theta2;
-  double x;
+  //double x;
   double R03[9];
   double b_x[9];
   int p1;
   int p2;
   int p3;
+  double p ;
+  double r;
   double absx21;
   double absx31;
   int itmp;
@@ -53,6 +67,7 @@ void ikine_6dof(double X, double Y, double Z, double r, double p, double y,
   double theta6_re;
   double theta6_im;
   creal_T v;
+  std::cout<<"Inverse Kinematics processing..."<<endl;
   theta1 = std::atan(Y / X);
   r3 = Z - a1;
   r3 = std::sqrt((X * X + Y * Y) + r3 * r3);
@@ -290,10 +305,53 @@ void ikine_6dof(double X, double Y, double Z, double r, double p, double y,
   theta[4] = theta5;
   theta[5].re = theta6_re;
   theta[5].im = theta6_im;
+  std::cout<<"servo1:"<<theta[0].re<<endl;
+  std::cout<<"servo2:"<<theta[1].re<<endl;
+  std::cout<<"servo3:"<<theta[2].re <<endl;
+  std::cout<<"servo4:"<<theta[3]<<endl ;
+  std::cout<<"servo5:"<<theta[4]<<endl;
+  std::cout<<"servo6:"<<theta[5].re<<endl ;
+ /// send.servo1=theta[0].re;
+///  send.servo2=theta[1].re;
+///  send.servo3=theta[2].re;
+///  send.servo4=theta[3];
+///  send.servo5=theta[4];
+///  send.servo6=theta[5].re;
+  
 }
+//void callback(robotic_arm::rpose& test)
+//{
+ //ROS_INFO("Received [%d]",test->data);
+//receive from test, do we need type-cpnversion?
+//}
+int main(int argc, char **argv)
+{ double x,y,z,roll,pitch,yaw;
+	NodeHandle n;
+  //Subscriber sub = n.subscribe("arm/recievepose", 1000, &callback) ;//subscribing from values sent by us
+//	Publisher pub = n.advertise<std_msgs::Float64>("arm/sendpose", 1000);//publishing values to topic to be subscibed by MCU
+  Rate rate(10);
+  while (ok())
+	{
+ //   std::Float64 recieve;
+    
+    std::cout << "GIVE INPUT: "<<endl;
+    std::cout<<"\n x:"<< x ;
+    std::cout<<"\n y:"<<y ;
+    std::cout<<"\n z:"<< z;
+    std::cout<<"\n roll"<<roll;
+    std::cout<<"\n pitch"<<pitch;
+    std::cout<<"\n yaw"<<yaw;
 
-//
-// File trailer for ikine_6dof.cpp
-//
-// [EOF]
-//
+  //  std_msgs::Float64 send;  
+        ikine_6dof(x,y,z,roll,pitch,yaw,10,10,20);
+   //   send.data = recieve;
+    //  p.publish(msg);
+ 
+	
+ // ikine_6dof(recieve.x1,recieve.x2,recive.x3,recieve.yaw,recieve.roll,recieve.pitch);//call function
+//	send.publish(send);
+   spinOnce();
+	rate.sleep();
+} 
+	return 0;
+}

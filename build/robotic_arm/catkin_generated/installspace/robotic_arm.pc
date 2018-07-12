@@ -3,6 +3,6 @@ prefix=/home/hit_ter/rover_ws/install
 Name: robotic_arm
 Description: Description of robotic_arm
 Version: 0.0.0
-Cflags: 
-Libs: -L/home/hit_ter/rover_ws/install/lib 
-Requires: 
+Cflags: -I/home/hit_ter/rover_ws/install/include
+Libs: -L/home/hit_ter/rover_ws/install/lib -lrobotic_arm
+Requires: actionlib actionlib_msgs roscpp std_msgs

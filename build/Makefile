@@ -478,6 +478,19 @@ actionlib_msgs_generate_messages_lisp/fast:
 .PHONY : actionlib_msgs_generate_messages_lisp/fast
 
 #=============================================================================
+# Target rules for targets named robotic_arm
+
+# Build rule for target.
+robotic_arm: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 robotic_arm
+.PHONY : robotic_arm
+
+# fast build rule for target.
+robotic_arm/fast:
+	$(MAKE) -f robotic_arm/CMakeFiles/robotic_arm.dir/build.make robotic_arm/CMakeFiles/robotic_arm.dir/build
+.PHONY : robotic_arm/fast
+
+#=============================================================================
 # Target rules for targets named actionlib_generate_messages_nodejs
 
 # Build rule for target.
@@ -657,6 +670,7 @@ help:
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... actionlib_msgs_generate_messages_py"
 	@echo "... actionlib_msgs_generate_messages_lisp"
+	@echo "... robotic_arm"
 	@echo "... actionlib_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_lisp"
