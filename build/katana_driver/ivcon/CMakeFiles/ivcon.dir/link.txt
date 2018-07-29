@@ -1,1 +1,0 @@
-/usr/bin/cc     CMakeFiles/ivcon.dir/src/ivcon.c.o  -o /home/hit_ter/rover_ws/devel/lib/ivcon/ivcon -rdynamic -lm 

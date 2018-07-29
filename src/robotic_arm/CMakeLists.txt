@@ -8,12 +8,13 @@ add_compile_options(-std=c++11)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  actionlib
-  actionlib_msgs
   roscpp
   std_msgs
+  rospy
+  geometry_msgs
+  message_generation
 )
-find_package(Eigen3 REQUIRED)
+#find_package(Eigen3 REQUIRED)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -22,7 +23,7 @@ find_package(Eigen3 REQUIRED)
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
 ## See http://ros.org/doc/api/catkin/html/user_guide/setup_dot_py.html
-# catkin_python_setup()
+#catkin_python_setup()
 
 ################################################
 ## Declare ROS messages, services and actions ##
@@ -49,11 +50,11 @@ find_package(Eigen3 REQUIRED)
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
-# add_message_files(
-#   FILES
-#   Message1.msg
-#   Message2.msg
-# )
+ add_message_files(
+   FILES
+   ghusa.msg
+ 
+ )
 
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -70,10 +71,10 @@ find_package(Eigen3 REQUIRED)
 # )
 
 ## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   actionlib_msgs#   std_msgs
-# )
+ generate_messages(
+   DEPENDENCIES
+   geometry_msgs#   std_msgs
+ )
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -105,9 +106,9 @@ find_package(Eigen3 REQUIRED)
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-  INCLUDE_DIRS include
+  #INCLUDE_DIRS include
   LIBRARIES robotic_arm
-  CATKIN_DEPENDS actionlib actionlib_msgs roscpp std_msgs
+  CATKIN_DEPENDS roscpp rospy geometry_msgs message_runtime
 #  DEPENDS system_lib
 )
 
@@ -115,9 +116,9 @@ catkin_package(
 ## Build ##
 ###########
 
-## Specify additional locations of header files
+## Specify additional locaticdons of header files
 ## Your package locations should be listed before other locations
-include_directories(include ${catkin_INCLUDE_DIRS} ${EIGEN3_INCLUDE_DIRS})
+include_directories( ${catkin_INCLUDE_DIRS})
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
@@ -129,11 +130,12 @@ include_directories(include ${catkin_INCLUDE_DIRS} ${EIGEN3_INCLUDE_DIRS})
 ## either from message generation or dynamic reconfigure
 #add_dependencies(robotic_arm ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
-## Declare a C++ executable
-## With catkin_make all packages are built within a single CMake context
-## The recommended prefix ensures that target names across packages don't collide
-add_executable(robotic_arm src/ikine_6dof.cpp)
-
+## Declare a C++ exd prefix ensures that target names across packages don't collide
+add_executable(key src/keyteleop.cpp)
+target_link_libraries(key
+  ${catkin_LIBRARIES}
+)
+add_dependencies(key robotic_arm_generate_messages_cpp)
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use
@@ -142,12 +144,12 @@ add_executable(robotic_arm src/ikine_6dof.cpp)
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
-add_dependencies(robotic_arm ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+#add_dependencies(robotic_arm ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-target_link_libraries(robotic_arm
-   ${catkin_LIBRARIES}
- )
+#target_link_libraries(robotic_arm
+#   ${catkin_LIBRARIES}
+# )
 
 #############
 ## Install ##
@@ -162,7 +164,11 @@ target_link_libraries(robotic_arm
 #   scripts/my_python_script
 #   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 # )
-
+#install(PROGRAMS
+#   scripts/IK_server.py
+	
+ #  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+ #)
 ## Mark executables and/or libraries for installation
 # install(TARGETS ${PROJECT_NAME} ${PROJECT_NAME}_node
 #   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}

@@ -1,2 +1,0 @@
-/usr/bin/ar qc /home/hit_ter/rover_ws/devel/lib/libknicommon.a  CMakeFiles/knicommon.dir/KNI_4.3.0/src/common/Timer.cpp.o
-/usr/bin/ranlib /home/hit_ter/rover_ws/devel/lib/libknicommon.a

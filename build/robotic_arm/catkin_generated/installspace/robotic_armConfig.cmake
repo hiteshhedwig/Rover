@@ -152,7 +152,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(robotic_arm_EXPORTED_TARGETS "")
+set(robotic_arm_EXPORTED_TARGETS "robotic_arm_generate_messages_cpp;robotic_arm_generate_messages_eus;robotic_arm_generate_messages_lisp;robotic_arm_generate_messages_nodejs;robotic_arm_generate_messages_py")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${robotic_arm_EXPORTED_TARGETS})
   if(NOT TARGET ${t})
@@ -160,7 +160,7 @@ foreach(t ${robotic_arm_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "actionlib;actionlib_msgs;roscpp;std_msgs")
+set(depends "roscpp;rospy;geometry_msgs;message_runtime")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls
@@ -189,7 +189,7 @@ foreach(depend ${depends})
   list(APPEND robotic_arm_EXPORTED_TARGETS ${${robotic_arm_dep}_EXPORTED_TARGETS})
 endforeach()
 
-set(pkg_cfg_extras "")
+set(pkg_cfg_extras "robotic_arm-msg-extras.cmake")
 foreach(extra ${pkg_cfg_extras})
   if(NOT IS_ABSOLUTE ${extra})
     set(extra ${robotic_arm_DIR}/${extra})

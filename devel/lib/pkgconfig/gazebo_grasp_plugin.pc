@@ -1,8 +1,0 @@
-prefix=/home/hit_ter/rover_ws/devel
-
-Name: gazebo_grasp_plugin
-Description: Description of gazebo_grasp_plugin
-Version: 1.0.2
-Cflags: -I/home/hit_ter/rover_ws/src/gazebo_grasp_plugin/include
-Libs: -L/home/hit_ter/rover_ws/devel/lib -lgazebo_grasp_fix
-Requires: gazebo_ros geometry_msgs roscpp std_msgs gazebo_ros

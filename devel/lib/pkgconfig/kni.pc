@@ -1,8 +1,0 @@
-prefix=/home/hit_ter/rover_ws/devel
-
-Name: kni
-Description: Description of kni
-Version: 1.1.2
-Cflags: -I/home/hit_ter/rover_ws/src/katana_driver/kni/KNI_4.3.0/include -I/usr/include
-Libs: -L/home/hit_ter/rover_ws/devel/lib -lKNIBase -lKinematics -lKNI_InvKin -lKNI_LM
-Requires: 
