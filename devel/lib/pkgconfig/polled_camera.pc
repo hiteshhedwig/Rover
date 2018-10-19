@@ -1,0 +1,8 @@
+prefix=/home/hit_ter/rover_ws/devel
+
+Name: polled_camera
+Description: Description of polled_camera
+Version: 1.11.13
+Cflags: -I/home/hit_ter/rover_ws/devel/include -I/home/hit_ter/rover_ws/src/image_common/polled_camera/include
+Libs: -L/home/hit_ter/rover_ws/devel/lib -lpolled_camera
+Requires: image_transport message_runtime roscpp sensor_msgs std_msgs
