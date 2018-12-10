@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<launch>
+      
+
+      <node pkg="auto_navi" type= "navi_real.py" name= "navi_real" output="screen" />
+      
+      
+      <node pkg="auto_navi" type= "test_1.py" name= "test_1" output="screen" launch-prefix= "gnome-terminal --command" />
+      
+      <node pkg="auto_navi" type= "calc12.py" name= "calc12" output="screen" launch-prefix= "gnome-terminal --command" />
+      
+      <node pkg="auto_navi" type= "timercal.py" name= "timercal" output="screen" launch-prefix= "gnome-terminal --command" />
+
+</launch>
+

@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/hit_ter/rover_ws/build
 include vision_opencv/cv_bridge/test/CMakeFiles/run_tests_cv_bridge_nosetests_python_bindings.py.dir/progress.make
 
 vision_opencv/cv_bridge/test/CMakeFiles/run_tests_cv_bridge_nosetests_python_bindings.py:
-	cd /home/hit_ter/rover_ws/build/vision_opencv/cv_bridge/test && ../../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/catkin/cmake/test/run_tests.py /home/hit_ter/rover_ws/build/test_results/cv_bridge/nosetests-python_bindings.py.xml /usr/bin/cmake\ -E\ make_directory\ /home/hit_ter/rover_ws/build/test_results/cv_bridge /usr/bin/nosetests-2.7\ -P\ --process-timeout=60\ /home/hit_ter/rover_ws/src/vision_opencv/cv_bridge/test/python_bindings.py\ --with-xunit\ --xunit-file=/home/hit_ter/rover_ws/build/test_results/cv_bridge/nosetests-python_bindings.py.xml
+	cd /home/hit_ter/rover_ws/build/vision_opencv/cv_bridge/test && ../../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/catkin/cmake/test/run_tests.py /home/hit_ter/rover_ws/build/test_results/cv_bridge/nosetests-python_bindings.py.xml "/usr/bin/cmake -E make_directory /home/hit_ter/rover_ws/build/test_results/cv_bridge" "/usr/bin/nosetests-2.7 -P --process-timeout=60 /home/hit_ter/rover_ws/src/vision_opencv/cv_bridge/test/python_bindings.py --with-xunit --xunit-file=/home/hit_ter/rover_ws/build/test_results/cv_bridge/nosetests-python_bindings.py.xml"
 
 run_tests_cv_bridge_nosetests_python_bindings.py: vision_opencv/cv_bridge/test/CMakeFiles/run_tests_cv_bridge_nosetests_python_bindings.py
 run_tests_cv_bridge_nosetests_python_bindings.py: vision_opencv/cv_bridge/test/CMakeFiles/run_tests_cv_bridge_nosetests_python_bindings.py.dir/build.make

@@ -14,6 +14,7 @@ find_package(catkin REQUIRED COMPONENTS
   sensor_msgs
   std_msgs
   camera_info_manager
+  message_generation
 )
 
 find_package(OpenCV REQUIRED)
@@ -53,11 +54,11 @@ find_package(camera_info_manager)
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
-# add_message_files(
-#   FILES
+ add_message_files(
+   FILES
 #   gps_data.msg
-#   Message2.msg
-# )
+   try1.msg
+ )
 
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -74,10 +75,10 @@ find_package(camera_info_manager)
 # )
 
 ## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   std_msgs
-# )
+ generate_messages(
+   DEPENDENCIES
+   std_msgs
+ )
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -111,7 +112,7 @@ find_package(camera_info_manager)
 catkin_package(
 #  INCLUDE_DIRS include
   LIBRARIES auto_navi
-  CATKIN_DEPENDS roscpp rospy  cv_bridge sensor_msgs std_msgs
+  CATKIN_DEPENDS roscpp rospy  cv_bridge sensor_msgs std_msgs message_runtime
 #  DEPENDS system_lib
 )
 

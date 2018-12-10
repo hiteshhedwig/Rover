@@ -6,4 +6,6 @@
   :components ((:file "_package")
     (:file "gps_data" :depends-on ("_package_gps_data"))
     (:file "_package_gps_data" :depends-on ("_package"))
+    (:file "try1" :depends-on ("_package_try1"))
+    (:file "_package_try1" :depends-on ("_package"))
   ))

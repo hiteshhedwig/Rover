@@ -3,6 +3,6 @@ prefix=/home/hit_ter/rover_ws/devel
 Name: auto_navi
 Description: Description of auto_navi
 Version: 0.0.0
-Cflags: 
+Cflags: -I/home/hit_ter/rover_ws/devel/include
 Libs: -L/home/hit_ter/rover_ws/devel/lib -lauto_navi
-Requires: roscpp rospy cv_bridge sensor_msgs std_msgs
+Requires: roscpp rospy cv_bridge sensor_msgs std_msgs message_runtime

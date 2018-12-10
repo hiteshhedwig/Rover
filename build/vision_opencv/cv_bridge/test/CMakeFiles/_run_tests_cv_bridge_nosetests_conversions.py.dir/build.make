@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/hit_ter/rover_ws/build
 include vision_opencv/cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests_conversions.py.dir/progress.make
 
 vision_opencv/cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests_conversions.py:
-	cd /home/hit_ter/rover_ws/build/vision_opencv/cv_bridge/test && ../../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/catkin/cmake/test/run_tests.py /home/hit_ter/rover_ws/build/test_results/cv_bridge/nosetests-conversions.py.xml /usr/bin/cmake\ -E\ make_directory\ /home/hit_ter/rover_ws/build/test_results/cv_bridge /usr/bin/nosetests-2.7\ -P\ --process-timeout=60\ /home/hit_ter/rover_ws/src/vision_opencv/cv_bridge/test/conversions.py\ --with-xunit\ --xunit-file=/home/hit_ter/rover_ws/build/test_results/cv_bridge/nosetests-conversions.py.xml
+	cd /home/hit_ter/rover_ws/build/vision_opencv/cv_bridge/test && ../../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/catkin/cmake/test/run_tests.py /home/hit_ter/rover_ws/build/test_results/cv_bridge/nosetests-conversions.py.xml "/usr/bin/cmake -E make_directory /home/hit_ter/rover_ws/build/test_results/cv_bridge" "/usr/bin/nosetests-2.7 -P --process-timeout=60 /home/hit_ter/rover_ws/src/vision_opencv/cv_bridge/test/conversions.py --with-xunit --xunit-file=/home/hit_ter/rover_ws/build/test_results/cv_bridge/nosetests-conversions.py.xml"
 
 _run_tests_cv_bridge_nosetests_conversions.py: vision_opencv/cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests_conversions.py
 _run_tests_cv_bridge_nosetests_conversions.py: vision_opencv/cv_bridge/test/CMakeFiles/_run_tests_cv_bridge_nosetests_conversions.py.dir/build.make

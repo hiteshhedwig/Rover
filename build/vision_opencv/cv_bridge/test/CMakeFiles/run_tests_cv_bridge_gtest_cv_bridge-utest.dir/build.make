@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/hit_ter/rover_ws/build
 include vision_opencv/cv_bridge/test/CMakeFiles/run_tests_cv_bridge_gtest_cv_bridge-utest.dir/progress.make
 
 vision_opencv/cv_bridge/test/CMakeFiles/run_tests_cv_bridge_gtest_cv_bridge-utest:
-	cd /home/hit_ter/rover_ws/build/vision_opencv/cv_bridge/test && ../../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/catkin/cmake/test/run_tests.py /home/hit_ter/rover_ws/build/test_results/cv_bridge/gtest-cv_bridge-utest.xml /home/hit_ter/rover_ws/devel/lib/cv_bridge/cv_bridge-utest\ --gtest_output=xml:/home/hit_ter/rover_ws/build/test_results/cv_bridge/gtest-cv_bridge-utest.xml
+	cd /home/hit_ter/rover_ws/build/vision_opencv/cv_bridge/test && ../../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/catkin/cmake/test/run_tests.py /home/hit_ter/rover_ws/build/test_results/cv_bridge/gtest-cv_bridge-utest.xml "/home/hit_ter/rover_ws/devel/lib/cv_bridge/cv_bridge-utest --gtest_output=xml:/home/hit_ter/rover_ws/build/test_results/cv_bridge/gtest-cv_bridge-utest.xml"
 
 run_tests_cv_bridge_gtest_cv_bridge-utest: vision_opencv/cv_bridge/test/CMakeFiles/run_tests_cv_bridge_gtest_cv_bridge-utest
 run_tests_cv_bridge_gtest_cv_bridge-utest: vision_opencv/cv_bridge/test/CMakeFiles/run_tests_cv_bridge_gtest_cv_bridge-utest.dir/build.make

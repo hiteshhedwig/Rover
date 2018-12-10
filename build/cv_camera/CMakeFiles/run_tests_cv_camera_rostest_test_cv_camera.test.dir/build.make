@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/hit_ter/rover_ws/build
 include cv_camera/CMakeFiles/run_tests_cv_camera_rostest_test_cv_camera.test.dir/progress.make
 
 cv_camera/CMakeFiles/run_tests_cv_camera_rostest_test_cv_camera.test:
-	cd /home/hit_ter/rover_ws/build/cv_camera && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/catkin/cmake/test/run_tests.py /home/hit_ter/rover_ws/build/test_results/cv_camera/rostest-test_cv_camera.xml /opt/ros/kinetic/share/rostest/cmake/../../../bin/rostest\ --pkgdir=/home/hit_ter/rover_ws/src/cv_camera\ --package=cv_camera\ --results-filename\ test_cv_camera.xml\ --results-base-dir\ "/home/hit_ter/rover_ws/build/test_results"\ /home/hit_ter/rover_ws/src/cv_camera/test/cv_camera.test\ 
+	cd /home/hit_ter/rover_ws/build/cv_camera && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/catkin/cmake/test/run_tests.py /home/hit_ter/rover_ws/build/test_results/cv_camera/rostest-test_cv_camera.xml "/opt/ros/kinetic/share/rostest/cmake/../../../bin/rostest --pkgdir=/home/hit_ter/rover_ws/src/cv_camera --package=cv_camera --results-filename test_cv_camera.xml --results-base-dir \"/home/hit_ter/rover_ws/build/test_results\" /home/hit_ter/rover_ws/src/cv_camera/test/cv_camera.test "
 
 run_tests_cv_camera_rostest_test_cv_camera.test: cv_camera/CMakeFiles/run_tests_cv_camera_rostest_test_cv_camera.test
 run_tests_cv_camera_rostest_test_cv_camera.test: cv_camera/CMakeFiles/run_tests_cv_camera_rostest_test_cv_camera.test.dir/build.make

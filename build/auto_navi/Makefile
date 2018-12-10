@@ -56,16 +56,6 @@ CMAKE_BINARY_DIR = /home/hit_ter/rover_ws/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\" \"main\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -78,27 +68,16 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
 
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
 
-.PHONY : rebuild_cache/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
+.PHONY : edit_cache/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -111,6 +90,38 @@ install/local/fast: install/local
 
 .PHONY : install/local/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\" \"main\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -121,17 +132,6 @@ test:
 test/fast: test
 
 .PHONY : test/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -165,19 +165,211 @@ depend:
 	cd /home/hit_ter/rover_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+auto_navi/CMakeFiles/auto_navi_genpy.dir/rule:
+	cd /home/hit_ter/rover_ws/build && $(MAKE) -f CMakeFiles/Makefile2 auto_navi/CMakeFiles/auto_navi_genpy.dir/rule
+.PHONY : auto_navi/CMakeFiles/auto_navi_genpy.dir/rule
+
+# Convenience name for target.
+auto_navi_genpy: auto_navi/CMakeFiles/auto_navi_genpy.dir/rule
+
+.PHONY : auto_navi_genpy
+
+# fast build rule for target.
+auto_navi_genpy/fast:
+	cd /home/hit_ter/rover_ws/build && $(MAKE) -f auto_navi/CMakeFiles/auto_navi_genpy.dir/build.make auto_navi/CMakeFiles/auto_navi_genpy.dir/build
+.PHONY : auto_navi_genpy/fast
+
+# Convenience name for target.
+auto_navi/CMakeFiles/auto_navi_generate_messages_cpp.dir/rule:
+	cd /home/hit_ter/rover_ws/build && $(MAKE) -f CMakeFiles/Makefile2 auto_navi/CMakeFiles/auto_navi_generate_messages_cpp.dir/rule
+.PHONY : auto_navi/CMakeFiles/auto_navi_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+auto_navi_generate_messages_cpp: auto_navi/CMakeFiles/auto_navi_generate_messages_cpp.dir/rule
+
+.PHONY : auto_navi_generate_messages_cpp
+
+# fast build rule for target.
+auto_navi_generate_messages_cpp/fast:
+	cd /home/hit_ter/rover_ws/build && $(MAKE) -f auto_navi/CMakeFiles/auto_navi_generate_messages_cpp.dir/build.make auto_navi/CMakeFiles/auto_navi_generate_messages_cpp.dir/build
+.PHONY : auto_navi_generate_messages_cpp/fast
+
+# Convenience name for target.
+auto_navi/CMakeFiles/_auto_navi_generate_messages_check_deps_try1.dir/rule:
+	cd /home/hit_ter/rover_ws/build && $(MAKE) -f CMakeFiles/Makefile2 auto_navi/CMakeFiles/_auto_navi_generate_messages_check_deps_try1.dir/rule
+.PHONY : auto_navi/CMakeFiles/_auto_navi_generate_messages_check_deps_try1.dir/rule
+
+# Convenience name for target.
+_auto_navi_generate_messages_check_deps_try1: auto_navi/CMakeFiles/_auto_navi_generate_messages_check_deps_try1.dir/rule
+
+.PHONY : _auto_navi_generate_messages_check_deps_try1
+
+# fast build rule for target.
+_auto_navi_generate_messages_check_deps_try1/fast:
+	cd /home/hit_ter/rover_ws/build && $(MAKE) -f auto_navi/CMakeFiles/_auto_navi_generate_messages_check_deps_try1.dir/build.make auto_navi/CMakeFiles/_auto_navi_generate_messages_check_deps_try1.dir/build
+.PHONY : _auto_navi_generate_messages_check_deps_try1/fast
+
+# Convenience name for target.
+auto_navi/CMakeFiles/auto_navi_generate_messages_py.dir/rule:
+	cd /home/hit_ter/rover_ws/build && $(MAKE) -f CMakeFiles/Makefile2 auto_navi/CMakeFiles/auto_navi_generate_messages_py.dir/rule
+.PHONY : auto_navi/CMakeFiles/auto_navi_generate_messages_py.dir/rule
+
+# Convenience name for target.
+auto_navi_generate_messages_py: auto_navi/CMakeFiles/auto_navi_generate_messages_py.dir/rule
+
+.PHONY : auto_navi_generate_messages_py
+
+# fast build rule for target.
+auto_navi_generate_messages_py/fast:
+	cd /home/hit_ter/rover_ws/build && $(MAKE) -f auto_navi/CMakeFiles/auto_navi_generate_messages_py.dir/build.make auto_navi/CMakeFiles/auto_navi_generate_messages_py.dir/build
+.PHONY : auto_navi_generate_messages_py/fast
+
+# Convenience name for target.
+auto_navi/CMakeFiles/auto_navi_gennodejs.dir/rule:
+	cd /home/hit_ter/rover_ws/build && $(MAKE) -f CMakeFiles/Makefile2 auto_navi/CMakeFiles/auto_navi_gennodejs.dir/rule
+.PHONY : auto_navi/CMakeFiles/auto_navi_gennodejs.dir/rule
+
+# Convenience name for target.
+auto_navi_gennodejs: auto_navi/CMakeFiles/auto_navi_gennodejs.dir/rule
+
+.PHONY : auto_navi_gennodejs
+
+# fast build rule for target.
+auto_navi_gennodejs/fast:
+	cd /home/hit_ter/rover_ws/build && $(MAKE) -f auto_navi/CMakeFiles/auto_navi_gennodejs.dir/build.make auto_navi/CMakeFiles/auto_navi_gennodejs.dir/build
+.PHONY : auto_navi_gennodejs/fast
+
+# Convenience name for target.
+auto_navi/CMakeFiles/auto_navi_gencpp.dir/rule:
+	cd /home/hit_ter/rover_ws/build && $(MAKE) -f CMakeFiles/Makefile2 auto_navi/CMakeFiles/auto_navi_gencpp.dir/rule
+.PHONY : auto_navi/CMakeFiles/auto_navi_gencpp.dir/rule
+
+# Convenience name for target.
+auto_navi_gencpp: auto_navi/CMakeFiles/auto_navi_gencpp.dir/rule
+
+.PHONY : auto_navi_gencpp
+
+# fast build rule for target.
+auto_navi_gencpp/fast:
+	cd /home/hit_ter/rover_ws/build && $(MAKE) -f auto_navi/CMakeFiles/auto_navi_gencpp.dir/build.make auto_navi/CMakeFiles/auto_navi_gencpp.dir/build
+.PHONY : auto_navi_gencpp/fast
+
+# Convenience name for target.
+auto_navi/CMakeFiles/auto_navi_generate_messages_nodejs.dir/rule:
+	cd /home/hit_ter/rover_ws/build && $(MAKE) -f CMakeFiles/Makefile2 auto_navi/CMakeFiles/auto_navi_generate_messages_nodejs.dir/rule
+.PHONY : auto_navi/CMakeFiles/auto_navi_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+auto_navi_generate_messages_nodejs: auto_navi/CMakeFiles/auto_navi_generate_messages_nodejs.dir/rule
+
+.PHONY : auto_navi_generate_messages_nodejs
+
+# fast build rule for target.
+auto_navi_generate_messages_nodejs/fast:
+	cd /home/hit_ter/rover_ws/build && $(MAKE) -f auto_navi/CMakeFiles/auto_navi_generate_messages_nodejs.dir/build.make auto_navi/CMakeFiles/auto_navi_generate_messages_nodejs.dir/build
+.PHONY : auto_navi_generate_messages_nodejs/fast
+
+# Convenience name for target.
+auto_navi/CMakeFiles/auto_navi_generate_messages_eus.dir/rule:
+	cd /home/hit_ter/rover_ws/build && $(MAKE) -f CMakeFiles/Makefile2 auto_navi/CMakeFiles/auto_navi_generate_messages_eus.dir/rule
+.PHONY : auto_navi/CMakeFiles/auto_navi_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+auto_navi_generate_messages_eus: auto_navi/CMakeFiles/auto_navi_generate_messages_eus.dir/rule
+
+.PHONY : auto_navi_generate_messages_eus
+
+# fast build rule for target.
+auto_navi_generate_messages_eus/fast:
+	cd /home/hit_ter/rover_ws/build && $(MAKE) -f auto_navi/CMakeFiles/auto_navi_generate_messages_eus.dir/build.make auto_navi/CMakeFiles/auto_navi_generate_messages_eus.dir/build
+.PHONY : auto_navi_generate_messages_eus/fast
+
+# Convenience name for target.
+auto_navi/CMakeFiles/auto_navi_generate_messages.dir/rule:
+	cd /home/hit_ter/rover_ws/build && $(MAKE) -f CMakeFiles/Makefile2 auto_navi/CMakeFiles/auto_navi_generate_messages.dir/rule
+.PHONY : auto_navi/CMakeFiles/auto_navi_generate_messages.dir/rule
+
+# Convenience name for target.
+auto_navi_generate_messages: auto_navi/CMakeFiles/auto_navi_generate_messages.dir/rule
+
+.PHONY : auto_navi_generate_messages
+
+# fast build rule for target.
+auto_navi_generate_messages/fast:
+	cd /home/hit_ter/rover_ws/build && $(MAKE) -f auto_navi/CMakeFiles/auto_navi_generate_messages.dir/build.make auto_navi/CMakeFiles/auto_navi_generate_messages.dir/build
+.PHONY : auto_navi_generate_messages/fast
+
+# Convenience name for target.
+auto_navi/CMakeFiles/auto_navi_geneus.dir/rule:
+	cd /home/hit_ter/rover_ws/build && $(MAKE) -f CMakeFiles/Makefile2 auto_navi/CMakeFiles/auto_navi_geneus.dir/rule
+.PHONY : auto_navi/CMakeFiles/auto_navi_geneus.dir/rule
+
+# Convenience name for target.
+auto_navi_geneus: auto_navi/CMakeFiles/auto_navi_geneus.dir/rule
+
+.PHONY : auto_navi_geneus
+
+# fast build rule for target.
+auto_navi_geneus/fast:
+	cd /home/hit_ter/rover_ws/build && $(MAKE) -f auto_navi/CMakeFiles/auto_navi_geneus.dir/build.make auto_navi/CMakeFiles/auto_navi_geneus.dir/build
+.PHONY : auto_navi_geneus/fast
+
+# Convenience name for target.
+auto_navi/CMakeFiles/auto_navi_genlisp.dir/rule:
+	cd /home/hit_ter/rover_ws/build && $(MAKE) -f CMakeFiles/Makefile2 auto_navi/CMakeFiles/auto_navi_genlisp.dir/rule
+.PHONY : auto_navi/CMakeFiles/auto_navi_genlisp.dir/rule
+
+# Convenience name for target.
+auto_navi_genlisp: auto_navi/CMakeFiles/auto_navi_genlisp.dir/rule
+
+.PHONY : auto_navi_genlisp
+
+# fast build rule for target.
+auto_navi_genlisp/fast:
+	cd /home/hit_ter/rover_ws/build && $(MAKE) -f auto_navi/CMakeFiles/auto_navi_genlisp.dir/build.make auto_navi/CMakeFiles/auto_navi_genlisp.dir/build
+.PHONY : auto_navi_genlisp/fast
+
+# Convenience name for target.
+auto_navi/CMakeFiles/auto_navi_generate_messages_lisp.dir/rule:
+	cd /home/hit_ter/rover_ws/build && $(MAKE) -f CMakeFiles/Makefile2 auto_navi/CMakeFiles/auto_navi_generate_messages_lisp.dir/rule
+.PHONY : auto_navi/CMakeFiles/auto_navi_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+auto_navi_generate_messages_lisp: auto_navi/CMakeFiles/auto_navi_generate_messages_lisp.dir/rule
+
+.PHONY : auto_navi_generate_messages_lisp
+
+# fast build rule for target.
+auto_navi_generate_messages_lisp/fast:
+	cd /home/hit_ter/rover_ws/build && $(MAKE) -f auto_navi/CMakeFiles/auto_navi_generate_messages_lisp.dir/build.make auto_navi/CMakeFiles/auto_navi_generate_messages_lisp.dir/build
+.PHONY : auto_navi_generate_messages_lisp/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... list_install_components"
 	@echo "... install"
-	@echo "... rebuild_cache"
-	@echo "... install/strip"
-	@echo "... install/local"
-	@echo "... test"
 	@echo "... edit_cache"
+	@echo "... install/local"
+	@echo "... list_install_components"
+	@echo "... install/strip"
+	@echo "... rebuild_cache"
+	@echo "... auto_navi_genpy"
+	@echo "... test"
+	@echo "... auto_navi_generate_messages_cpp"
+	@echo "... _auto_navi_generate_messages_check_deps_try1"
+	@echo "... auto_navi_generate_messages_py"
+	@echo "... auto_navi_gennodejs"
+	@echo "... auto_navi_gencpp"
+	@echo "... auto_navi_generate_messages_nodejs"
+	@echo "... auto_navi_generate_messages_eus"
+	@echo "... auto_navi_generate_messages"
+	@echo "... auto_navi_geneus"
+	@echo "... auto_navi_genlisp"
+	@echo "... auto_navi_generate_messages_lisp"
 .PHONY : help
 
 

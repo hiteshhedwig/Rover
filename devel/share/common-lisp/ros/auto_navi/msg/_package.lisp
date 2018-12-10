@@ -3,5 +3,7 @@
   (:export
    "<GPS_DATA>"
    "GPS_DATA"
+   "<TRY1>"
+   "TRY1"
   ))
 

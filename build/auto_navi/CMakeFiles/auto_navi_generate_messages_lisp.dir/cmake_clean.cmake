@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/auto_navi_generate_messages_lisp"
-  "/home/hit_ter/rover_ws/devel/share/common-lisp/ros/auto_navi/msg/gps_data.lisp"
+  "/home/hit_ter/rover_ws/devel/share/common-lisp/ros/auto_navi/msg/try1.lisp"
 )
 
 # Per-language clean rules from dependency scanning.

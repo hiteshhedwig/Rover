@@ -53,16 +53,16 @@ CMAKE_BINARY_DIR = /home/hit_ter/rover_ws/build
 # Include the progress variables for this target.
 include auto_navi/CMakeFiles/auto_navi_generate_messages_nodejs.dir/progress.make
 
-auto_navi/CMakeFiles/auto_navi_generate_messages_nodejs: /home/hit_ter/rover_ws/devel/share/gennodejs/ros/auto_navi/msg/gps_data.js
+auto_navi/CMakeFiles/auto_navi_generate_messages_nodejs: /home/hit_ter/rover_ws/devel/share/gennodejs/ros/auto_navi/msg/try1.js
 
 
-/home/hit_ter/rover_ws/devel/share/gennodejs/ros/auto_navi/msg/gps_data.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
-/home/hit_ter/rover_ws/devel/share/gennodejs/ros/auto_navi/msg/gps_data.js: /home/hit_ter/rover_ws/src/auto_navi/msg/gps_data.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/hit_ter/rover_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from auto_navi/gps_data.msg"
-	cd /home/hit_ter/rover_ws/build/auto_navi && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/hit_ter/rover_ws/src/auto_navi/msg/gps_data.msg -Iauto_navi:/home/hit_ter/rover_ws/src/auto_navi/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p auto_navi -o /home/hit_ter/rover_ws/devel/share/gennodejs/ros/auto_navi/msg
+/home/hit_ter/rover_ws/devel/share/gennodejs/ros/auto_navi/msg/try1.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
+/home/hit_ter/rover_ws/devel/share/gennodejs/ros/auto_navi/msg/try1.js: /home/hit_ter/rover_ws/src/auto_navi/msg/try1.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/hit_ter/rover_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from auto_navi/try1.msg"
+	cd /home/hit_ter/rover_ws/build/auto_navi && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/hit_ter/rover_ws/src/auto_navi/msg/try1.msg -Iauto_navi:/home/hit_ter/rover_ws/src/auto_navi/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p auto_navi -o /home/hit_ter/rover_ws/devel/share/gennodejs/ros/auto_navi/msg
 
 auto_navi_generate_messages_nodejs: auto_navi/CMakeFiles/auto_navi_generate_messages_nodejs
-auto_navi_generate_messages_nodejs: /home/hit_ter/rover_ws/devel/share/gennodejs/ros/auto_navi/msg/gps_data.js
+auto_navi_generate_messages_nodejs: /home/hit_ter/rover_ws/devel/share/gennodejs/ros/auto_navi/msg/try1.js
 auto_navi_generate_messages_nodejs: auto_navi/CMakeFiles/auto_navi_generate_messages_nodejs.dir/build.make
 
 .PHONY : auto_navi_generate_messages_nodejs
