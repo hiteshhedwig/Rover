@@ -580,3 +580,17 @@ Linking C executable cmTC_2b9f6
 make[1]: Leaving directory '/home/hit_ter/rover_ws/build/CMakeFiles/CMakeTmp'
 
 
+Determining if files linux/joystick.h exist passed with the following output:
+Change Dir: /home/hit_ter/rover_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_49667/fast"
+/usr/bin/make -f CMakeFiles/cmTC_49667.dir/build.make CMakeFiles/cmTC_49667.dir/build
+make[1]: Entering directory '/home/hit_ter/rover_ws/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_49667.dir/CheckIncludeFiles.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_49667.dir/CheckIncludeFiles.c.o   -c /home/hit_ter/rover_ws/build/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_49667
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_49667.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_49667.dir/CheckIncludeFiles.c.o  -o cmTC_49667 -rdynamic 
+make[1]: Leaving directory '/home/hit_ter/rover_ws/build/CMakeFiles/CMakeTmp'
+
+

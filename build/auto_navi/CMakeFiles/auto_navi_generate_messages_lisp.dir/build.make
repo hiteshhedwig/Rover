@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /home/hit_ter/rover_ws/build
 include auto_navi/CMakeFiles/auto_navi_generate_messages_lisp.dir/progress.make
 
 auto_navi/CMakeFiles/auto_navi_generate_messages_lisp: /home/hit_ter/rover_ws/devel/share/common-lisp/ros/auto_navi/msg/try1.lisp
+auto_navi/CMakeFiles/auto_navi_generate_messages_lisp: /home/hit_ter/rover_ws/devel/share/common-lisp/ros/auto_navi/msg/try2.lisp
 
 
 /home/hit_ter/rover_ws/devel/share/common-lisp/ros/auto_navi/msg/try1.lisp: /opt/ros/kinetic/lib/genlisp/gen_lisp.py
@@ -61,8 +62,14 @@ auto_navi/CMakeFiles/auto_navi_generate_messages_lisp: /home/hit_ter/rover_ws/de
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/hit_ter/rover_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from auto_navi/try1.msg"
 	cd /home/hit_ter/rover_ws/build/auto_navi && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/hit_ter/rover_ws/src/auto_navi/msg/try1.msg -Iauto_navi:/home/hit_ter/rover_ws/src/auto_navi/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p auto_navi -o /home/hit_ter/rover_ws/devel/share/common-lisp/ros/auto_navi/msg
 
+/home/hit_ter/rover_ws/devel/share/common-lisp/ros/auto_navi/msg/try2.lisp: /opt/ros/kinetic/lib/genlisp/gen_lisp.py
+/home/hit_ter/rover_ws/devel/share/common-lisp/ros/auto_navi/msg/try2.lisp: /home/hit_ter/rover_ws/src/auto_navi/msg/try2.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/hit_ter/rover_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from auto_navi/try2.msg"
+	cd /home/hit_ter/rover_ws/build/auto_navi && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/hit_ter/rover_ws/src/auto_navi/msg/try2.msg -Iauto_navi:/home/hit_ter/rover_ws/src/auto_navi/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p auto_navi -o /home/hit_ter/rover_ws/devel/share/common-lisp/ros/auto_navi/msg
+
 auto_navi_generate_messages_lisp: auto_navi/CMakeFiles/auto_navi_generate_messages_lisp
 auto_navi_generate_messages_lisp: /home/hit_ter/rover_ws/devel/share/common-lisp/ros/auto_navi/msg/try1.lisp
+auto_navi_generate_messages_lisp: /home/hit_ter/rover_ws/devel/share/common-lisp/ros/auto_navi/msg/try2.lisp
 auto_navi_generate_messages_lisp: auto_navi/CMakeFiles/auto_navi_generate_messages_lisp.dir/build.make
 
 .PHONY : auto_navi_generate_messages_lisp

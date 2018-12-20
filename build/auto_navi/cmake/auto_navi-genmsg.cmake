@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "auto_navi: 1 messages, 0 services")
+message(STATUS "auto_navi: 2 messages, 0 services")
 
 set(MSG_I_FLAGS "-Iauto_navi:/home/hit_ter/rover_ws/src/auto_navi/msg;-Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg")
 
@@ -22,6 +22,11 @@ add_custom_target(_auto_navi_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "auto_navi" "/home/hit_ter/rover_ws/src/auto_navi/msg/try1.msg" ""
 )
 
+get_filename_component(_filename "/home/hit_ter/rover_ws/src/auto_navi/msg/try2.msg" NAME_WE)
+add_custom_target(_auto_navi_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "auto_navi" "/home/hit_ter/rover_ws/src/auto_navi/msg/try2.msg" ""
+)
+
 #
 #  langs = gencpp;geneus;genlisp;gennodejs;genpy
 #
@@ -30,6 +35,12 @@ add_custom_target(_auto_navi_generate_messages_check_deps_${_filename}
 ### Generating Messages
 _generate_msg_cpp(auto_navi
   "/home/hit_ter/rover_ws/src/auto_navi/msg/try1.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/auto_navi
+)
+_generate_msg_cpp(auto_navi
+  "/home/hit_ter/rover_ws/src/auto_navi/msg/try2.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/auto_navi
@@ -51,6 +62,8 @@ add_dependencies(auto_navi_generate_messages auto_navi_generate_messages_cpp)
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/hit_ter/rover_ws/src/auto_navi/msg/try1.msg" NAME_WE)
 add_dependencies(auto_navi_generate_messages_cpp _auto_navi_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/hit_ter/rover_ws/src/auto_navi/msg/try2.msg" NAME_WE)
+add_dependencies(auto_navi_generate_messages_cpp _auto_navi_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(auto_navi_gencpp)
@@ -63,6 +76,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS auto_navi_generate_messages_cpp)
 ### Generating Messages
 _generate_msg_eus(auto_navi
   "/home/hit_ter/rover_ws/src/auto_navi/msg/try1.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/auto_navi
+)
+_generate_msg_eus(auto_navi
+  "/home/hit_ter/rover_ws/src/auto_navi/msg/try2.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/auto_navi
@@ -84,6 +103,8 @@ add_dependencies(auto_navi_generate_messages auto_navi_generate_messages_eus)
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/hit_ter/rover_ws/src/auto_navi/msg/try1.msg" NAME_WE)
 add_dependencies(auto_navi_generate_messages_eus _auto_navi_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/hit_ter/rover_ws/src/auto_navi/msg/try2.msg" NAME_WE)
+add_dependencies(auto_navi_generate_messages_eus _auto_navi_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(auto_navi_geneus)
@@ -96,6 +117,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS auto_navi_generate_messages_eus)
 ### Generating Messages
 _generate_msg_lisp(auto_navi
   "/home/hit_ter/rover_ws/src/auto_navi/msg/try1.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/auto_navi
+)
+_generate_msg_lisp(auto_navi
+  "/home/hit_ter/rover_ws/src/auto_navi/msg/try2.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/auto_navi
@@ -117,6 +144,8 @@ add_dependencies(auto_navi_generate_messages auto_navi_generate_messages_lisp)
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/hit_ter/rover_ws/src/auto_navi/msg/try1.msg" NAME_WE)
 add_dependencies(auto_navi_generate_messages_lisp _auto_navi_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/hit_ter/rover_ws/src/auto_navi/msg/try2.msg" NAME_WE)
+add_dependencies(auto_navi_generate_messages_lisp _auto_navi_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(auto_navi_genlisp)
@@ -129,6 +158,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS auto_navi_generate_messages_lisp)
 ### Generating Messages
 _generate_msg_nodejs(auto_navi
   "/home/hit_ter/rover_ws/src/auto_navi/msg/try1.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/auto_navi
+)
+_generate_msg_nodejs(auto_navi
+  "/home/hit_ter/rover_ws/src/auto_navi/msg/try2.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/auto_navi
@@ -150,6 +185,8 @@ add_dependencies(auto_navi_generate_messages auto_navi_generate_messages_nodejs)
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/hit_ter/rover_ws/src/auto_navi/msg/try1.msg" NAME_WE)
 add_dependencies(auto_navi_generate_messages_nodejs _auto_navi_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/hit_ter/rover_ws/src/auto_navi/msg/try2.msg" NAME_WE)
+add_dependencies(auto_navi_generate_messages_nodejs _auto_navi_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(auto_navi_gennodejs)
@@ -162,6 +199,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS auto_navi_generate_messages_nodejs)
 ### Generating Messages
 _generate_msg_py(auto_navi
   "/home/hit_ter/rover_ws/src/auto_navi/msg/try1.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/auto_navi
+)
+_generate_msg_py(auto_navi
+  "/home/hit_ter/rover_ws/src/auto_navi/msg/try2.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/auto_navi
@@ -182,6 +225,8 @@ add_dependencies(auto_navi_generate_messages auto_navi_generate_messages_py)
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/hit_ter/rover_ws/src/auto_navi/msg/try1.msg" NAME_WE)
+add_dependencies(auto_navi_generate_messages_py _auto_navi_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/hit_ter/rover_ws/src/auto_navi/msg/try2.msg" NAME_WE)
 add_dependencies(auto_navi_generate_messages_py _auto_navi_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

@@ -1,0 +1,8 @@
+prefix=/home/hit_ter/rover_ws/install
+
+Name: rosserial_vex_cortex
+Description: Description of rosserial_vex_cortex
+Version: 0.8.0
+Cflags: 
+Libs: -L/home/hit_ter/rover_ws/install/lib 
+Requires: 

@@ -58,6 +58,7 @@ find_package(camera_info_manager)
    FILES
 #   gps_data.msg
    try1.msg
+   try2.msg
  )
 
 ## Generate services in the 'srv' folder

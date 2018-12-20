@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<launch>
+  <node pkg="joy" type="joy_node" name="ps3_joy" output="screen" >
+    <param name="dev" type="string" value="/dev/input/js0" />
+    <param name="deadzone" value="0.12" />
+  </node>
+  <node pkg="ps3joy" type="ps3joy_node2.py" name="ps3joy_node2" output="screen" launch-prefix= "gnome-terminal --command"/> 
+
+  <node pkg="diagnostic_aggregator" type="aggregator_node" name="diagnostic_aggregator" >
+    <!-- Load the file you made above -->
+    <rosparam command="load" file="$(find ps3joy)/diagnostics.yaml" />
+  </node>
+
+
+</launch>

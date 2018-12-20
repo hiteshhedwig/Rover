@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /home/hit_ter/rover_ws/build
 include auto_navi/CMakeFiles/auto_navi_generate_messages_eus.dir/progress.make
 
 auto_navi/CMakeFiles/auto_navi_generate_messages_eus: /home/hit_ter/rover_ws/devel/share/roseus/ros/auto_navi/msg/try1.l
+auto_navi/CMakeFiles/auto_navi_generate_messages_eus: /home/hit_ter/rover_ws/devel/share/roseus/ros/auto_navi/msg/try2.l
 auto_navi/CMakeFiles/auto_navi_generate_messages_eus: /home/hit_ter/rover_ws/devel/share/roseus/ros/auto_navi/manifest.l
 
 
@@ -62,12 +63,18 @@ auto_navi/CMakeFiles/auto_navi_generate_messages_eus: /home/hit_ter/rover_ws/dev
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/hit_ter/rover_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from auto_navi/try1.msg"
 	cd /home/hit_ter/rover_ws/build/auto_navi && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/hit_ter/rover_ws/src/auto_navi/msg/try1.msg -Iauto_navi:/home/hit_ter/rover_ws/src/auto_navi/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p auto_navi -o /home/hit_ter/rover_ws/devel/share/roseus/ros/auto_navi/msg
 
+/home/hit_ter/rover_ws/devel/share/roseus/ros/auto_navi/msg/try2.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
+/home/hit_ter/rover_ws/devel/share/roseus/ros/auto_navi/msg/try2.l: /home/hit_ter/rover_ws/src/auto_navi/msg/try2.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/hit_ter/rover_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from auto_navi/try2.msg"
+	cd /home/hit_ter/rover_ws/build/auto_navi && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/hit_ter/rover_ws/src/auto_navi/msg/try2.msg -Iauto_navi:/home/hit_ter/rover_ws/src/auto_navi/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p auto_navi -o /home/hit_ter/rover_ws/devel/share/roseus/ros/auto_navi/msg
+
 /home/hit_ter/rover_ws/devel/share/roseus/ros/auto_navi/manifest.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/hit_ter/rover_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp manifest code for auto_navi"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/hit_ter/rover_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp manifest code for auto_navi"
 	cd /home/hit_ter/rover_ws/build/auto_navi && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/hit_ter/rover_ws/devel/share/roseus/ros/auto_navi auto_navi std_msgs
 
 auto_navi_generate_messages_eus: auto_navi/CMakeFiles/auto_navi_generate_messages_eus
 auto_navi_generate_messages_eus: /home/hit_ter/rover_ws/devel/share/roseus/ros/auto_navi/msg/try1.l
+auto_navi_generate_messages_eus: /home/hit_ter/rover_ws/devel/share/roseus/ros/auto_navi/msg/try2.l
 auto_navi_generate_messages_eus: /home/hit_ter/rover_ws/devel/share/roseus/ros/auto_navi/manifest.l
 auto_navi_generate_messages_eus: auto_navi/CMakeFiles/auto_navi_generate_messages_eus.dir/build.make
 

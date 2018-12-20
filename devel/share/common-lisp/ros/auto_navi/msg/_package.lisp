@@ -5,5 +5,7 @@
    "GPS_DATA"
    "<TRY1>"
    "TRY1"
+   "<TRY2>"
+   "TRY2"
   ))
 

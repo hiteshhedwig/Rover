@@ -329,7 +329,7 @@ UBUNTU:BOOL=TRUE
 UBUNTU_XENIAL:BOOL=TRUE
 
 //Path to a file.
-_file_name:FILEPATH=/home/hit_ter/rover_ws/src/cv_camera/test/no_yaml.test
+_file_name:FILEPATH=/home/hit_ter/rover_ws/src/rosserial/rosserial_test/test/rosserial_python_socket.test
 
 //Path to a file.
 _gmock_INCLUDES:FILEPATH=/usr/include/gmock/gmock.h
@@ -345,6 +345,9 @@ _gtest_SOURCES:FILEPATH=/usr/src/gtest/src/gtest.cc
 
 //Path to a file.
 _path_name:FILEPATH=/home/hit_ter/rover_ws/src/vision_opencv/image_geometry/test/directed.py
+
+//The directory containing a CMake configuration file for actionlib_msgs.
+actionlib_msgs_DIR:PATH=/opt/ros/kinetic/share/actionlib_msgs/cmake
 
 //Value Computed by CMake
 auto_navi_BINARY_DIR:STATIC=/home/hit_ter/rover_ws/build/auto_navi
@@ -429,6 +432,12 @@ cv_camera_SOURCE_DIR:STATIC=/home/hit_ter/rover_ws/src/cv_camera
 
 //Dependencies for the target
 cv_camera_nodelet_LIB_DEPENDS:STATIC=general;image_transport;general;/opt/ros/kinetic/lib/libmessage_filters.so;general;cv_bridge;general;/opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_core3.so.3.3.1;general;/opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_imgproc3.so.3.3.1;general;/opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_imgcodecs3.so.3.3.1;general;/opt/ros/kinetic/lib/libnodeletlib.so;general;/usr/lib/x86_64-linux-gnu/libuuid.so;general;/opt/ros/kinetic/lib/libbondcpp.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml2.so;general;/opt/ros/kinetic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/kinetic/lib/libroslib.so;general;/opt/ros/kinetic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;camera_info_manager;general;camera_calibration_parsers;general;/opt/ros/kinetic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/opt/ros/kinetic/lib/librosconsole.so;general;/opt/ros/kinetic/lib/librosconsole_log4cxx.so;general;/opt/ros/kinetic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/kinetic/lib/libxmlrpcpp.so;general;/opt/ros/kinetic/lib/libroscpp_serialization.so;general;/opt/ros/kinetic/lib/librostime.so;general;/opt/ros/kinetic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;general;cv_camera;
+
+//The directory containing a CMake configuration file for diagnostic_msgs.
+diagnostic_msgs_DIR:PATH=/opt/ros/kinetic/share/diagnostic_msgs/cmake
+
+//The directory containing a CMake configuration file for diagnostic_updater.
+diagnostic_updater_DIR:PATH=/opt/ros/kinetic/share/diagnostic_updater/cmake
 
 //The directory containing a CMake configuration file for gencpp.
 gencpp_DIR:PATH=/opt/ros/kinetic/share/gencpp/cmake
@@ -521,6 +530,24 @@ image_transport_SOURCE_DIR:STATIC=/home/hit_ter/rover_ws/src/image_common/image_
 //Dependencies for the target
 image_transport_plugins_LIB_DEPENDS:STATIC=general;image_transport;
 
+//Value Computed by CMake
+joy_BINARY_DIR:STATIC=/home/hit_ter/rover_ws/build/joy
+
+//Value Computed by CMake
+joy_SOURCE_DIR:STATIC=/home/hit_ter/rover_ws/src/joy
+
+//Value Computed by CMake
+joystick_drivers_BINARY_DIR:STATIC=/home/hit_ter/rover_ws/build/joystick_drivers
+
+//Value Computed by CMake
+joystick_drivers_SOURCE_DIR:STATIC=/home/hit_ter/rover_ws/src/joystick_drivers
+
+//Value Computed by CMake
+joystick_pkg_BINARY_DIR:STATIC=/home/hit_ter/rover_ws/build/joystick_pkg
+
+//Value Computed by CMake
+joystick_pkg_SOURCE_DIR:STATIC=/home/hit_ter/rover_ws/src/joystick_pkg
+
 //Path to a library.
 lib:FILEPATH=/opt/ros/kinetic/lib/librospack.so
 
@@ -532,6 +559,9 @@ message_generation_DIR:PATH=/opt/ros/kinetic/share/message_generation/cmake
 
 //The directory containing a CMake configuration file for message_runtime.
 message_runtime_DIR:PATH=/opt/ros/kinetic/share/message_runtime/cmake
+
+//The directory containing a CMake configuration file for nav_msgs.
+nav_msgs_DIR:PATH=/opt/ros/kinetic/share/nav_msgs/cmake
 
 //The directory containing a CMake configuration file for nodelet.
 nodelet_DIR:PATH=/opt/ros/kinetic/share/nodelet/cmake
@@ -555,6 +585,12 @@ polled_camera_LIB_DEPENDS:STATIC=general;image_transport;general;/opt/ros/kineti
 polled_camera_SOURCE_DIR:STATIC=/home/hit_ter/rover_ws/src/image_common/polled_camera
 
 //Value Computed by CMake
+ps3joy_BINARY_DIR:STATIC=/home/hit_ter/rover_ws/build/ps3joy
+
+//Value Computed by CMake
+ps3joy_SOURCE_DIR:STATIC=/home/hit_ter/rover_ws/src/ps3joy
+
+//Value Computed by CMake
 robotic_arm_BINARY_DIR:STATIC=/home/hit_ter/rover_ws/build/robotic_arm
 
 //Value Computed by CMake
@@ -572,6 +608,9 @@ roscpp_serialization_DIR:PATH=/opt/ros/kinetic/share/roscpp_serialization/cmake
 //The directory containing a CMake configuration file for roscpp_traits.
 roscpp_traits_DIR:PATH=/opt/ros/kinetic/share/roscpp_traits/cmake
 
+//The directory containing a CMake configuration file for rosgraph.
+rosgraph_DIR:PATH=/opt/ros/kinetic/share/rosgraph/cmake
+
 //The directory containing a CMake configuration file for rosgraph_msgs.
 rosgraph_msgs_DIR:PATH=/opt/ros/kinetic/share/rosgraph_msgs/cmake
 
@@ -587,14 +626,103 @@ rospack_DIR:PATH=/opt/ros/kinetic/share/rospack/cmake
 //The directory containing a CMake configuration file for rospy.
 rospy_DIR:PATH=/opt/ros/kinetic/share/rospy/cmake
 
-//The directory containing a CMake configuration file for rosserial_arduino.
-rosserial_arduino_DIR:PATH=/opt/ros/kinetic/share/rosserial_arduino/cmake
+//Value Computed by CMake
+rosserial_BINARY_DIR:STATIC=/home/hit_ter/rover_ws/build/rosserial/rosserial
+
+//Value Computed by CMake
+rosserial_SOURCE_DIR:STATIC=/home/hit_ter/rover_ws/src/rosserial/rosserial
+
+//Value Computed by CMake
+rosserial_arduino_BINARY_DIR:STATIC=/home/hit_ter/rover_ws/build/rosserial/rosserial_arduino
+
+rosserial_arduino_DIR:PATH=
+
+//Value Computed by CMake
+rosserial_arduino_SOURCE_DIR:STATIC=/home/hit_ter/rover_ws/src/rosserial/rosserial_arduino
+
+//Value Computed by CMake
+rosserial_client_BINARY_DIR:STATIC=/home/hit_ter/rover_ws/build/rosserial/rosserial_client
 
 //The directory containing a CMake configuration file for rosserial_client.
-rosserial_client_DIR:PATH=/opt/ros/kinetic/share/rosserial_client/cmake
+rosserial_client_DIR:PATH=/home/hit_ter/rover_ws/devel/share/rosserial_client/cmake
+
+//Value Computed by CMake
+rosserial_client_SOURCE_DIR:STATIC=/home/hit_ter/rover_ws/src/rosserial/rosserial_client
+
+//Value Computed by CMake
+rosserial_embeddedlinux_BINARY_DIR:STATIC=/home/hit_ter/rover_ws/build/rosserial/rosserial_embeddedlinux
+
+//Value Computed by CMake
+rosserial_embeddedlinux_SOURCE_DIR:STATIC=/home/hit_ter/rover_ws/src/rosserial/rosserial_embeddedlinux
+
+//Value Computed by CMake
+rosserial_mbed_BINARY_DIR:STATIC=/home/hit_ter/rover_ws/build/rosserial/rosserial_mbed
+
+//Value Computed by CMake
+rosserial_mbed_SOURCE_DIR:STATIC=/home/hit_ter/rover_ws/src/rosserial/rosserial_mbed
+
+//Value Computed by CMake
+rosserial_msgs_BINARY_DIR:STATIC=/home/hit_ter/rover_ws/build/rosserial/rosserial_msgs
 
 //The directory containing a CMake configuration file for rosserial_msgs.
-rosserial_msgs_DIR:PATH=/opt/ros/kinetic/share/rosserial_msgs/cmake
+rosserial_msgs_DIR:PATH=/home/hit_ter/rover_ws/devel/share/rosserial_msgs/cmake
+
+//Value Computed by CMake
+rosserial_msgs_SOURCE_DIR:STATIC=/home/hit_ter/rover_ws/src/rosserial/rosserial_msgs
+
+//Value Computed by CMake
+rosserial_python_BINARY_DIR:STATIC=/home/hit_ter/rover_ws/build/rosserial/rosserial_python
+
+//The directory containing a CMake configuration file for rosserial_python.
+rosserial_python_DIR:PATH=/home/hit_ter/rover_ws/devel/share/rosserial_python/cmake
+
+//Value Computed by CMake
+rosserial_python_SOURCE_DIR:STATIC=/home/hit_ter/rover_ws/src/rosserial/rosserial_python
+
+//Value Computed by CMake
+rosserial_server_BINARY_DIR:STATIC=/home/hit_ter/rover_ws/build/rosserial/rosserial_server
+
+//The directory containing a CMake configuration file for rosserial_server.
+rosserial_server_DIR:PATH=/home/hit_ter/rover_ws/devel/share/rosserial_server/cmake
+
+//Value Computed by CMake
+rosserial_server_SOURCE_DIR:STATIC=/home/hit_ter/rover_ws/src/rosserial/rosserial_server
+
+//Value Computed by CMake
+rosserial_test_BINARY_DIR:STATIC=/home/hit_ter/rover_ws/build/rosserial/rosserial_test
+
+//Value Computed by CMake
+rosserial_test_SOURCE_DIR:STATIC=/home/hit_ter/rover_ws/src/rosserial/rosserial_test
+
+//Value Computed by CMake
+rosserial_tivac_BINARY_DIR:STATIC=/home/hit_ter/rover_ws/build/rosserial/rosserial_tivac
+
+//Value Computed by CMake
+rosserial_tivac_SOURCE_DIR:STATIC=/home/hit_ter/rover_ws/src/rosserial/rosserial_tivac
+
+//Value Computed by CMake
+rosserial_vex_cortex_BINARY_DIR:STATIC=/home/hit_ter/rover_ws/build/rosserial/rosserial_vex_cortex
+
+//Value Computed by CMake
+rosserial_vex_cortex_SOURCE_DIR:STATIC=/home/hit_ter/rover_ws/src/rosserial/rosserial_vex_cortex
+
+//Value Computed by CMake
+rosserial_vex_v5_BINARY_DIR:STATIC=/home/hit_ter/rover_ws/build/rosserial/rosserial_vex_v5
+
+//Value Computed by CMake
+rosserial_vex_v5_SOURCE_DIR:STATIC=/home/hit_ter/rover_ws/src/rosserial/rosserial_vex_v5
+
+//Value Computed by CMake
+rosserial_windows_BINARY_DIR:STATIC=/home/hit_ter/rover_ws/build/rosserial/rosserial_windows
+
+//Value Computed by CMake
+rosserial_windows_SOURCE_DIR:STATIC=/home/hit_ter/rover_ws/src/rosserial/rosserial_windows
+
+//Value Computed by CMake
+rosserial_xbee_BINARY_DIR:STATIC=/home/hit_ter/rover_ws/build/rosserial/rosserial_xbee
+
+//Value Computed by CMake
+rosserial_xbee_SOURCE_DIR:STATIC=/home/hit_ter/rover_ws/src/rosserial/rosserial_xbee
 
 //The directory containing a CMake configuration file for rostest.
 rostest_DIR:PATH=/opt/ros/kinetic/share/rostest/cmake
@@ -608,8 +736,20 @@ sensor_msgs_DIR:PATH=/opt/ros/kinetic/share/sensor_msgs/cmake
 //The directory containing a CMake configuration file for smclib.
 smclib_DIR:PATH=/opt/ros/kinetic/share/smclib/cmake
 
+//Value Computed by CMake
+spacenav_node_BINARY_DIR:STATIC=/home/hit_ter/rover_ws/build/spacenav_node
+
+//Value Computed by CMake
+spacenav_node_SOURCE_DIR:STATIC=/home/hit_ter/rover_ws/src/spacenav_node
+
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/kinetic/share/std_msgs/cmake
+
+//The directory containing a CMake configuration file for std_srvs.
+std_srvs_DIR:PATH=/opt/ros/kinetic/share/std_srvs/cmake
+
+//The directory containing a CMake configuration file for topic_tools.
+topic_tools_DIR:PATH=/opt/ros/kinetic/share/topic_tools/cmake
 
 //Value Computed by CMake
 vision_opencv_BINARY_DIR:STATIC=/home/hit_ter/rover_ws/build/vision_opencv/vision_opencv
@@ -619,6 +759,12 @@ vision_opencv_DIR:PATH=vision_opencv_DIR-NOTFOUND
 
 //Value Computed by CMake
 vision_opencv_SOURCE_DIR:STATIC=/home/hit_ter/rover_ws/src/vision_opencv/vision_opencv
+
+//Value Computed by CMake
+wiimote_BINARY_DIR:STATIC=/home/hit_ter/rover_ws/build/wiimote
+
+//Value Computed by CMake
+wiimote_SOURCE_DIR:STATIC=/home/hit_ter/rover_ws/src/wiimote
 
 //The directory containing a CMake configuration file for xmlrpcpp.
 xmlrpcpp_DIR:PATH=/opt/ros/kinetic/share/xmlrpcpp/cmake
@@ -761,7 +907,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=20
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=39
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -830,6 +976,42 @@ GTEST_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 GTEST_MAIN_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GTEST_MAIN_LIBRARY_DEBUG
 GTEST_MAIN_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//Have include linux/joystick.h
+HAVE_LINUX_JOYSTICK_H:INTERNAL=1
+LIBUSB_CFLAGS:INTERNAL=
+LIBUSB_CFLAGS_I:INTERNAL=
+LIBUSB_CFLAGS_OTHER:INTERNAL=
+LIBUSB_FOUND:INTERNAL=1
+LIBUSB_INCLUDEDIR:INTERNAL=/usr/include
+LIBUSB_INCLUDE_DIRS:INTERNAL=
+LIBUSB_LDFLAGS:INTERNAL=-lusb
+LIBUSB_LDFLAGS_OTHER:INTERNAL=
+LIBUSB_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
+LIBUSB_LIBRARIES:INTERNAL=usb
+LIBUSB_LIBRARY_DIRS:INTERNAL=
+LIBUSB_LIBS:INTERNAL=
+LIBUSB_LIBS_L:INTERNAL=
+LIBUSB_LIBS_OTHER:INTERNAL=
+LIBUSB_LIBS_PATHS:INTERNAL=
+LIBUSB_PREFIX:INTERNAL=/usr
+LIBUSB_STATIC_CFLAGS:INTERNAL=
+LIBUSB_STATIC_CFLAGS_I:INTERNAL=
+LIBUSB_STATIC_CFLAGS_OTHER:INTERNAL=
+LIBUSB_STATIC_INCLUDE_DIRS:INTERNAL=
+LIBUSB_STATIC_LDFLAGS:INTERNAL=-lusb
+LIBUSB_STATIC_LDFLAGS_OTHER:INTERNAL=
+LIBUSB_STATIC_LIBDIR:INTERNAL=
+LIBUSB_STATIC_LIBRARIES:INTERNAL=usb
+LIBUSB_STATIC_LIBRARY_DIRS:INTERNAL=
+LIBUSB_STATIC_LIBS:INTERNAL=
+LIBUSB_STATIC_LIBS_L:INTERNAL=
+LIBUSB_STATIC_LIBS_OTHER:INTERNAL=
+LIBUSB_STATIC_LIBS_PATHS:INTERNAL=
+LIBUSB_VERSION:INTERNAL=0.1.12
+LIBUSB_libusb_INCLUDEDIR:INTERNAL=
+LIBUSB_libusb_LIBDIR:INTERNAL=
+LIBUSB_libusb_PREFIX:INTERNAL=
+LIBUSB_libusb_VERSION:INTERNAL=
 //ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
 PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PYTHON_EXECUTABLE
@@ -890,6 +1072,7 @@ _Boost_LIBRARY_DIR_RELEASE_LAST:INTERNAL=/usr/lib/x86_64-linux-gnu
 _Boost_NAMESPACE_LAST:INTERNAL=boost
 //Last used Boost_USE_MULTITHREADED value.
 _Boost_USE_MULTITHREADED_LAST:INTERNAL=TRUE
+__pkg_config_checked_LIBUSB:INTERNAL=1
 __pkg_config_checked_YAML_CPP:INTERNAL=1
-prefix_result:INTERNAL=
+prefix_result:INTERNAL=/usr/lib/x86_64-linux-gnu
 

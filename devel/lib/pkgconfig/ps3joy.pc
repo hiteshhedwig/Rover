@@ -1,0 +1,8 @@
+prefix=/home/hit_ter/rover_ws/devel
+
+Name: ps3joy
+Description: Description of ps3joy
+Version: 1.12.0
+Cflags: -I/home/hit_ter/rover_ws/devel/include
+Libs: -L/home/hit_ter/rover_ws/devel/lib -lps3joy
+Requires: diagnostic_msgs std_msgs sensor_msgs rospy rosgraph message_runtime
