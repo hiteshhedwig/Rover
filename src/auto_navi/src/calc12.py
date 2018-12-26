@@ -3,9 +3,9 @@ import cv2
 import numpy as np
 import math
 import rospy
-from auto_navi.msg import try1
+from auto_navi.msg import try1, try3
 
-
+pub= rospy.Publisher("coordinates1", try3, queue_size= 10)
 def callback(data):
 
  global cX
@@ -41,13 +41,21 @@ def calc(cX,cY):
                  steer(steer_ang)
 
 def steer(a):
+  msg=try3()
   if cX in range (90,244):
      #msg sent to arduino via ROS
-     print ("command to steer right by angle:", a)
+    msg.x=cX
+    msg.y=cY
+    pub.publish(msg)
+
+    print ("command to steer right by angle:", a)
 
   if cX in range (244, 488):
 
-     print ("command to steer left by angle:" ,a)
+    msg.x=cX
+    msg.y=cY
+    pub.publish(msg)
+    print ("command to steer left by angle:" ,a)
 
   return 0
 

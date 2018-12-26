@@ -53,23 +53,31 @@ CMAKE_BINARY_DIR = /home/hit_ter/rover_ws/build
 # Include the progress variables for this target.
 include auto_navi/CMakeFiles/auto_navi_generate_messages_cpp.dir/progress.make
 
+auto_navi/CMakeFiles/auto_navi_generate_messages_cpp: /home/hit_ter/rover_ws/devel/include/auto_navi/try3.h
 auto_navi/CMakeFiles/auto_navi_generate_messages_cpp: /home/hit_ter/rover_ws/devel/include/auto_navi/try1.h
 auto_navi/CMakeFiles/auto_navi_generate_messages_cpp: /home/hit_ter/rover_ws/devel/include/auto_navi/try2.h
 
 
+/home/hit_ter/rover_ws/devel/include/auto_navi/try3.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
+/home/hit_ter/rover_ws/devel/include/auto_navi/try3.h: /home/hit_ter/rover_ws/src/auto_navi/msg/try3.msg
+/home/hit_ter/rover_ws/devel/include/auto_navi/try3.h: /opt/ros/kinetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/hit_ter/rover_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from auto_navi/try3.msg"
+	cd /home/hit_ter/rover_ws/src/auto_navi && /home/hit_ter/rover_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/hit_ter/rover_ws/src/auto_navi/msg/try3.msg -Iauto_navi:/home/hit_ter/rover_ws/src/auto_navi/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p auto_navi -o /home/hit_ter/rover_ws/devel/include/auto_navi -e /opt/ros/kinetic/share/gencpp/cmake/..
+
 /home/hit_ter/rover_ws/devel/include/auto_navi/try1.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
 /home/hit_ter/rover_ws/devel/include/auto_navi/try1.h: /home/hit_ter/rover_ws/src/auto_navi/msg/try1.msg
 /home/hit_ter/rover_ws/devel/include/auto_navi/try1.h: /opt/ros/kinetic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/hit_ter/rover_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from auto_navi/try1.msg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/hit_ter/rover_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from auto_navi/try1.msg"
 	cd /home/hit_ter/rover_ws/src/auto_navi && /home/hit_ter/rover_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/hit_ter/rover_ws/src/auto_navi/msg/try1.msg -Iauto_navi:/home/hit_ter/rover_ws/src/auto_navi/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p auto_navi -o /home/hit_ter/rover_ws/devel/include/auto_navi -e /opt/ros/kinetic/share/gencpp/cmake/..
 
 /home/hit_ter/rover_ws/devel/include/auto_navi/try2.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
 /home/hit_ter/rover_ws/devel/include/auto_navi/try2.h: /home/hit_ter/rover_ws/src/auto_navi/msg/try2.msg
 /home/hit_ter/rover_ws/devel/include/auto_navi/try2.h: /opt/ros/kinetic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/hit_ter/rover_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from auto_navi/try2.msg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/hit_ter/rover_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from auto_navi/try2.msg"
 	cd /home/hit_ter/rover_ws/src/auto_navi && /home/hit_ter/rover_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/hit_ter/rover_ws/src/auto_navi/msg/try2.msg -Iauto_navi:/home/hit_ter/rover_ws/src/auto_navi/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p auto_navi -o /home/hit_ter/rover_ws/devel/include/auto_navi -e /opt/ros/kinetic/share/gencpp/cmake/..
 
 auto_navi_generate_messages_cpp: auto_navi/CMakeFiles/auto_navi_generate_messages_cpp
+auto_navi_generate_messages_cpp: /home/hit_ter/rover_ws/devel/include/auto_navi/try3.h
 auto_navi_generate_messages_cpp: /home/hit_ter/rover_ws/devel/include/auto_navi/try1.h
 auto_navi_generate_messages_cpp: /home/hit_ter/rover_ws/devel/include/auto_navi/try2.h
 auto_navi_generate_messages_cpp: auto_navi/CMakeFiles/auto_navi_generate_messages_cpp.dir/build.make

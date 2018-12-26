@@ -211,6 +211,21 @@ auto_navi_gennodejs/fast:
 .PHONY : auto_navi_gennodejs/fast
 
 # Convenience name for target.
+auto_navi/CMakeFiles/auto_navi_generate_messages_nodejs.dir/rule:
+	cd /home/hit_ter/rover_ws/build && $(MAKE) -f CMakeFiles/Makefile2 auto_navi/CMakeFiles/auto_navi_generate_messages_nodejs.dir/rule
+.PHONY : auto_navi/CMakeFiles/auto_navi_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+auto_navi_generate_messages_nodejs: auto_navi/CMakeFiles/auto_navi_generate_messages_nodejs.dir/rule
+
+.PHONY : auto_navi_generate_messages_nodejs
+
+# fast build rule for target.
+auto_navi_generate_messages_nodejs/fast:
+	cd /home/hit_ter/rover_ws/build && $(MAKE) -f auto_navi/CMakeFiles/auto_navi_generate_messages_nodejs.dir/build.make auto_navi/CMakeFiles/auto_navi_generate_messages_nodejs.dir/build
+.PHONY : auto_navi_generate_messages_nodejs/fast
+
+# Convenience name for target.
 auto_navi/CMakeFiles/_auto_navi_generate_messages_check_deps_try1.dir/rule:
 	cd /home/hit_ter/rover_ws/build && $(MAKE) -f CMakeFiles/Makefile2 auto_navi/CMakeFiles/_auto_navi_generate_messages_check_deps_try1.dir/rule
 .PHONY : auto_navi/CMakeFiles/_auto_navi_generate_messages_check_deps_try1.dir/rule
@@ -224,36 +239,6 @@ _auto_navi_generate_messages_check_deps_try1: auto_navi/CMakeFiles/_auto_navi_ge
 _auto_navi_generate_messages_check_deps_try1/fast:
 	cd /home/hit_ter/rover_ws/build && $(MAKE) -f auto_navi/CMakeFiles/_auto_navi_generate_messages_check_deps_try1.dir/build.make auto_navi/CMakeFiles/_auto_navi_generate_messages_check_deps_try1.dir/build
 .PHONY : _auto_navi_generate_messages_check_deps_try1/fast
-
-# Convenience name for target.
-auto_navi/CMakeFiles/auto_navi_generate_messages_cpp.dir/rule:
-	cd /home/hit_ter/rover_ws/build && $(MAKE) -f CMakeFiles/Makefile2 auto_navi/CMakeFiles/auto_navi_generate_messages_cpp.dir/rule
-.PHONY : auto_navi/CMakeFiles/auto_navi_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-auto_navi_generate_messages_cpp: auto_navi/CMakeFiles/auto_navi_generate_messages_cpp.dir/rule
-
-.PHONY : auto_navi_generate_messages_cpp
-
-# fast build rule for target.
-auto_navi_generate_messages_cpp/fast:
-	cd /home/hit_ter/rover_ws/build && $(MAKE) -f auto_navi/CMakeFiles/auto_navi_generate_messages_cpp.dir/build.make auto_navi/CMakeFiles/auto_navi_generate_messages_cpp.dir/build
-.PHONY : auto_navi_generate_messages_cpp/fast
-
-# Convenience name for target.
-auto_navi/CMakeFiles/_auto_navi_generate_messages_check_deps_try2.dir/rule:
-	cd /home/hit_ter/rover_ws/build && $(MAKE) -f CMakeFiles/Makefile2 auto_navi/CMakeFiles/_auto_navi_generate_messages_check_deps_try2.dir/rule
-.PHONY : auto_navi/CMakeFiles/_auto_navi_generate_messages_check_deps_try2.dir/rule
-
-# Convenience name for target.
-_auto_navi_generate_messages_check_deps_try2: auto_navi/CMakeFiles/_auto_navi_generate_messages_check_deps_try2.dir/rule
-
-.PHONY : _auto_navi_generate_messages_check_deps_try2
-
-# fast build rule for target.
-_auto_navi_generate_messages_check_deps_try2/fast:
-	cd /home/hit_ter/rover_ws/build && $(MAKE) -f auto_navi/CMakeFiles/_auto_navi_generate_messages_check_deps_try2.dir/build.make auto_navi/CMakeFiles/_auto_navi_generate_messages_check_deps_try2.dir/build
-.PHONY : _auto_navi_generate_messages_check_deps_try2/fast
 
 # Convenience name for target.
 auto_navi/CMakeFiles/auto_navi_generate_messages_eus.dir/rule:
@@ -286,19 +271,49 @@ auto_navi_gencpp/fast:
 .PHONY : auto_navi_gencpp/fast
 
 # Convenience name for target.
-auto_navi/CMakeFiles/auto_navi_generate_messages_nodejs.dir/rule:
-	cd /home/hit_ter/rover_ws/build && $(MAKE) -f CMakeFiles/Makefile2 auto_navi/CMakeFiles/auto_navi_generate_messages_nodejs.dir/rule
-.PHONY : auto_navi/CMakeFiles/auto_navi_generate_messages_nodejs.dir/rule
+auto_navi/CMakeFiles/_auto_navi_generate_messages_check_deps_try2.dir/rule:
+	cd /home/hit_ter/rover_ws/build && $(MAKE) -f CMakeFiles/Makefile2 auto_navi/CMakeFiles/_auto_navi_generate_messages_check_deps_try2.dir/rule
+.PHONY : auto_navi/CMakeFiles/_auto_navi_generate_messages_check_deps_try2.dir/rule
 
 # Convenience name for target.
-auto_navi_generate_messages_nodejs: auto_navi/CMakeFiles/auto_navi_generate_messages_nodejs.dir/rule
+_auto_navi_generate_messages_check_deps_try2: auto_navi/CMakeFiles/_auto_navi_generate_messages_check_deps_try2.dir/rule
 
-.PHONY : auto_navi_generate_messages_nodejs
+.PHONY : _auto_navi_generate_messages_check_deps_try2
 
 # fast build rule for target.
-auto_navi_generate_messages_nodejs/fast:
-	cd /home/hit_ter/rover_ws/build && $(MAKE) -f auto_navi/CMakeFiles/auto_navi_generate_messages_nodejs.dir/build.make auto_navi/CMakeFiles/auto_navi_generate_messages_nodejs.dir/build
-.PHONY : auto_navi_generate_messages_nodejs/fast
+_auto_navi_generate_messages_check_deps_try2/fast:
+	cd /home/hit_ter/rover_ws/build && $(MAKE) -f auto_navi/CMakeFiles/_auto_navi_generate_messages_check_deps_try2.dir/build.make auto_navi/CMakeFiles/_auto_navi_generate_messages_check_deps_try2.dir/build
+.PHONY : _auto_navi_generate_messages_check_deps_try2/fast
+
+# Convenience name for target.
+auto_navi/CMakeFiles/auto_navi_generate_messages_cpp.dir/rule:
+	cd /home/hit_ter/rover_ws/build && $(MAKE) -f CMakeFiles/Makefile2 auto_navi/CMakeFiles/auto_navi_generate_messages_cpp.dir/rule
+.PHONY : auto_navi/CMakeFiles/auto_navi_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+auto_navi_generate_messages_cpp: auto_navi/CMakeFiles/auto_navi_generate_messages_cpp.dir/rule
+
+.PHONY : auto_navi_generate_messages_cpp
+
+# fast build rule for target.
+auto_navi_generate_messages_cpp/fast:
+	cd /home/hit_ter/rover_ws/build && $(MAKE) -f auto_navi/CMakeFiles/auto_navi_generate_messages_cpp.dir/build.make auto_navi/CMakeFiles/auto_navi_generate_messages_cpp.dir/build
+.PHONY : auto_navi_generate_messages_cpp/fast
+
+# Convenience name for target.
+auto_navi/CMakeFiles/_auto_navi_generate_messages_check_deps_try3.dir/rule:
+	cd /home/hit_ter/rover_ws/build && $(MAKE) -f CMakeFiles/Makefile2 auto_navi/CMakeFiles/_auto_navi_generate_messages_check_deps_try3.dir/rule
+.PHONY : auto_navi/CMakeFiles/_auto_navi_generate_messages_check_deps_try3.dir/rule
+
+# Convenience name for target.
+_auto_navi_generate_messages_check_deps_try3: auto_navi/CMakeFiles/_auto_navi_generate_messages_check_deps_try3.dir/rule
+
+.PHONY : _auto_navi_generate_messages_check_deps_try3
+
+# fast build rule for target.
+_auto_navi_generate_messages_check_deps_try3/fast:
+	cd /home/hit_ter/rover_ws/build && $(MAKE) -f auto_navi/CMakeFiles/_auto_navi_generate_messages_check_deps_try3.dir/build.make auto_navi/CMakeFiles/_auto_navi_generate_messages_check_deps_try3.dir/build
+.PHONY : _auto_navi_generate_messages_check_deps_try3/fast
 
 # Convenience name for target.
 auto_navi/CMakeFiles/auto_navi_generate_messages.dir/rule:
@@ -375,13 +390,14 @@ help:
 	@echo "... auto_navi_genpy"
 	@echo "... auto_navi_generate_messages_py"
 	@echo "... auto_navi_gennodejs"
+	@echo "... auto_navi_generate_messages_nodejs"
 	@echo "... _auto_navi_generate_messages_check_deps_try1"
-	@echo "... test"
-	@echo "... auto_navi_generate_messages_cpp"
-	@echo "... _auto_navi_generate_messages_check_deps_try2"
 	@echo "... auto_navi_generate_messages_eus"
 	@echo "... auto_navi_gencpp"
-	@echo "... auto_navi_generate_messages_nodejs"
+	@echo "... test"
+	@echo "... _auto_navi_generate_messages_check_deps_try2"
+	@echo "... auto_navi_generate_messages_cpp"
+	@echo "... _auto_navi_generate_messages_check_deps_try3"
 	@echo "... auto_navi_generate_messages"
 	@echo "... auto_navi_geneus"
 	@echo "... auto_navi_genlisp"

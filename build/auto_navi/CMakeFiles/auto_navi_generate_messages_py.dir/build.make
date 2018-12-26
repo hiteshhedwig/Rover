@@ -53,28 +53,36 @@ CMAKE_BINARY_DIR = /home/hit_ter/rover_ws/build
 # Include the progress variables for this target.
 include auto_navi/CMakeFiles/auto_navi_generate_messages_py.dir/progress.make
 
+auto_navi/CMakeFiles/auto_navi_generate_messages_py: /home/hit_ter/rover_ws/devel/lib/python2.7/dist-packages/auto_navi/msg/_try3.py
 auto_navi/CMakeFiles/auto_navi_generate_messages_py: /home/hit_ter/rover_ws/devel/lib/python2.7/dist-packages/auto_navi/msg/_try1.py
 auto_navi/CMakeFiles/auto_navi_generate_messages_py: /home/hit_ter/rover_ws/devel/lib/python2.7/dist-packages/auto_navi/msg/_try2.py
 auto_navi/CMakeFiles/auto_navi_generate_messages_py: /home/hit_ter/rover_ws/devel/lib/python2.7/dist-packages/auto_navi/msg/__init__.py
 
 
+/home/hit_ter/rover_ws/devel/lib/python2.7/dist-packages/auto_navi/msg/_try3.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
+/home/hit_ter/rover_ws/devel/lib/python2.7/dist-packages/auto_navi/msg/_try3.py: /home/hit_ter/rover_ws/src/auto_navi/msg/try3.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/hit_ter/rover_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG auto_navi/try3"
+	cd /home/hit_ter/rover_ws/build/auto_navi && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/hit_ter/rover_ws/src/auto_navi/msg/try3.msg -Iauto_navi:/home/hit_ter/rover_ws/src/auto_navi/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p auto_navi -o /home/hit_ter/rover_ws/devel/lib/python2.7/dist-packages/auto_navi/msg
+
 /home/hit_ter/rover_ws/devel/lib/python2.7/dist-packages/auto_navi/msg/_try1.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
 /home/hit_ter/rover_ws/devel/lib/python2.7/dist-packages/auto_navi/msg/_try1.py: /home/hit_ter/rover_ws/src/auto_navi/msg/try1.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/hit_ter/rover_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG auto_navi/try1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/hit_ter/rover_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG auto_navi/try1"
 	cd /home/hit_ter/rover_ws/build/auto_navi && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/hit_ter/rover_ws/src/auto_navi/msg/try1.msg -Iauto_navi:/home/hit_ter/rover_ws/src/auto_navi/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p auto_navi -o /home/hit_ter/rover_ws/devel/lib/python2.7/dist-packages/auto_navi/msg
 
 /home/hit_ter/rover_ws/devel/lib/python2.7/dist-packages/auto_navi/msg/_try2.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
 /home/hit_ter/rover_ws/devel/lib/python2.7/dist-packages/auto_navi/msg/_try2.py: /home/hit_ter/rover_ws/src/auto_navi/msg/try2.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/hit_ter/rover_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG auto_navi/try2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/hit_ter/rover_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python from MSG auto_navi/try2"
 	cd /home/hit_ter/rover_ws/build/auto_navi && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/hit_ter/rover_ws/src/auto_navi/msg/try2.msg -Iauto_navi:/home/hit_ter/rover_ws/src/auto_navi/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p auto_navi -o /home/hit_ter/rover_ws/devel/lib/python2.7/dist-packages/auto_navi/msg
 
 /home/hit_ter/rover_ws/devel/lib/python2.7/dist-packages/auto_navi/msg/__init__.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
+/home/hit_ter/rover_ws/devel/lib/python2.7/dist-packages/auto_navi/msg/__init__.py: /home/hit_ter/rover_ws/devel/lib/python2.7/dist-packages/auto_navi/msg/_try3.py
 /home/hit_ter/rover_ws/devel/lib/python2.7/dist-packages/auto_navi/msg/__init__.py: /home/hit_ter/rover_ws/devel/lib/python2.7/dist-packages/auto_navi/msg/_try1.py
 /home/hit_ter/rover_ws/devel/lib/python2.7/dist-packages/auto_navi/msg/__init__.py: /home/hit_ter/rover_ws/devel/lib/python2.7/dist-packages/auto_navi/msg/_try2.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/hit_ter/rover_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python msg __init__.py for auto_navi"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/hit_ter/rover_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python msg __init__.py for auto_navi"
 	cd /home/hit_ter/rover_ws/build/auto_navi && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/hit_ter/rover_ws/devel/lib/python2.7/dist-packages/auto_navi/msg --initpy
 
 auto_navi_generate_messages_py: auto_navi/CMakeFiles/auto_navi_generate_messages_py
+auto_navi_generate_messages_py: /home/hit_ter/rover_ws/devel/lib/python2.7/dist-packages/auto_navi/msg/_try3.py
 auto_navi_generate_messages_py: /home/hit_ter/rover_ws/devel/lib/python2.7/dist-packages/auto_navi/msg/_try1.py
 auto_navi_generate_messages_py: /home/hit_ter/rover_ws/devel/lib/python2.7/dist-packages/auto_navi/msg/_try2.py
 auto_navi_generate_messages_py: /home/hit_ter/rover_ws/devel/lib/python2.7/dist-packages/auto_navi/msg/__init__.py

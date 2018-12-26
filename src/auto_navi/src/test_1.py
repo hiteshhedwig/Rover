@@ -3,45 +3,40 @@
 import rospy
 from std_msgs.msg import String
 #from std_msgs.msg import Float64
-from auto_navi.msg import try1
+from auto_navi.msg import try1, try3
+from std_msgs.msg import Int32
 #def callback(data):
 #    rospy.loginfo(rospy.get_caller_id() + " %s", data.data)
-
+pub= rospy.Publisher("turning_cmd", Int32, queue_size=10)
 def callback1(data):
-    rospy.loginfo("cX : %f, cY: %f" % (data.cX, data.cY))
-   # calc(cX,cY)
-'''
-def calc(cX,cY):
+    rospy.loginfo("cX : %f, cY: %f" % (data.x, data.y))
+    
+    calc(data.x,data.y)
+
+def calc(x,y):
     # angle measurement
-    if cY>= 350: 
-     angR= math.atan2((cY-478),(cX-488))
-     angL= math.atan2((cY-478),(cX-90))
-  #making it positive
-     angleR= math.fabs(math.degrees(angR))
-     angleL= math.fabs(math.degrees(angL))
-       if cX> 244:
-         print 'pixel location of contour,  X : ', cX, ' Y :', cY
-         print 'angle :', angleR
-         angle = angleR
-       if cX<= 244:
-         print 'pixel location of contour,  X : ', cX, ' Y :', cY
-         print 'angle :', angleL
-         angle= angleL
-        #in reference to relative frame
-         steer_ang= angle - 90
-         steer(steer_ang)
+    dist = 40
+    msg= Int32()
+    
+    if dist> 0 or y<350 :
+     #if y<350:
+            
+       MOTOR_SPEED= 50
+       msg.data= MOTOR_SPEED
+       print "forward"
+       #print cY
+       pub.publish(msg)
 
-def steer(a):
-  if cX in range (90,244):
-     #msg sent to arduino via ROS
-     print ("command to steer right by angle:", a)
+    if dist>0: 
+     if y>=350:
+       MOTOR_SPEED= 0
+       msg.data= MOTOR_SPEED
+       print "STop"
+       #print cY
+       pub.publish(msg)
+       
+ 
 
-  if cX in range (244, 488):
-
-     print ("command to steer left by angle:" ,a)
-
-  return 0
-'''
 
 
 def listener():
@@ -49,8 +44,11 @@ def listener():
     rospy.init_node('test_1', anonymous=True)
     #rospy.loginfo("Obstacle Detection Initiated!!")
 #    rospy.Subscriber("trying1", String, callback)
-    rospy.Subscriber("trying2", try1, callback1)
+    rospy.Subscriber("coordinates1", try3, callback1)
+
 
 if __name__ == '__main__':
+    print "Started"
     listener()
+
     rospy.spin()

@@ -36,6 +36,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/auto_navi/msg" TYPE FILE FILES
     "/home/hit_ter/rover_ws/src/auto_navi/msg/try1.msg"
     "/home/hit_ter/rover_ws/src/auto_navi/msg/try2.msg"
+    "/home/hit_ter/rover_ws/src/auto_navi/msg/try3.msg"
     )
 endif()
 

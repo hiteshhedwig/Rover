@@ -119,12 +119,12 @@ def processImage():
 
 
         #retangle marker
-
-   
+       
 	# loop over the contours
 	for c in cnts:
+                
 		# if the contour is too small, ignore it
-		if cv2.contourArea(c) < 300:
+                if cv2.contourArea(c) < 5000:
 			continue
                 M= cv2.moments(c)
                 cX= int(M["m10"]/ M["m00"])
@@ -143,13 +143,20 @@ def processImage():
 		  cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 1) 
                   cv2.circle(image,(cX, cY), 2, (0,0,255),-1)
                   cv2.putText(image,'co-ordinates: {0}'.format(tup), (cX - 25, cY - 25),cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
+                  if cY>350: 
+                   msg.cX= cX
+                   msg.cY= cY
+                   pub1.publish(msg)
+                  if cY<350:
+                   msg.cX= cX
+                   msg.cY= cY
+                   pub1.publish(msg)
+  
 		
                 rospy.loginfo("Obstacle DETECTED!!")
                 #hello_str = "Obstacle Detected" 
                 #pub.publish(hello_str)
-                msg.cX= cX
-                msg.cY= cY
-                pub1.publish(msg)
+                
                 
                 
                 

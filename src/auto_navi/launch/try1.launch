@@ -6,8 +6,10 @@
       
       
       <node pkg="auto_navi" type= "test_1.py" name= "test_1" output="screen" launch-prefix= "gnome-terminal --command" />
+
+
       
-      <node pkg="auto_navi" type= "calc12.py" name= "calc12" output="screen" launch-prefix= "gnome-terminal --command" />
+      <node pkg="auto_navi" type= "test12.py" name= "test12" output="screen" launch-prefix= "gnome-terminal --command" />
       
       <node pkg="auto_navi" type= "timercal.py" name= "timercal" output="screen" launch-prefix= "gnome-terminal --command" />
 

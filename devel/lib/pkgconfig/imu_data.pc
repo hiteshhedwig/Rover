@@ -1,0 +1,8 @@
+prefix=/home/hit_ter/rover_ws/devel
+
+Name: imu_data
+Description: Description of imu_data
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/hit_ter/rover_ws/devel/lib 
+Requires: mavros rospy sensor_msgs message_runtime

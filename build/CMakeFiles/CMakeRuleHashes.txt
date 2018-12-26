@@ -2,6 +2,7 @@
 597ac664c7efaeb76e1db130f414d535 /home/hit_ter/rover_ws/devel/include/auto_navi/gps_data.h
 52047d4d30b903dd73673f0e60d7ab77 /home/hit_ter/rover_ws/devel/include/auto_navi/try1.h
 619c7ea954324d025e76e44fa0c91f51 /home/hit_ter/rover_ws/devel/include/auto_navi/try2.h
+476b7a2ef123bbcc9e42948c0b111fef /home/hit_ter/rover_ws/devel/include/auto_navi/try3.h
 720e2decfd6857d77263c29ad8d3a500 /home/hit_ter/rover_ws/devel/include/polled_camera/GetPolledImage.h
 0134e872913f9ac71dd014d621c9431e /home/hit_ter/rover_ws/devel/include/ps3joy/try2.h
 12ba1017215f60ec5fda8fb70bbfa622 /home/hit_ter/rover_ws/devel/include/robotic_arm/ghusa.h
@@ -21,6 +22,7 @@ ddd3c3faa61dcc15a8a6d5478a732f6a /home/hit_ter/rover_ws/devel/include/wiimote/Ti
 be40e0013c973e1c3076e06ee1251cef /home/hit_ter/rover_ws/devel/lib/python2.7/dist-packages/auto_navi/msg/_gps_data.py
 bcdd13712803a9e4f58d6c3132b24c61 /home/hit_ter/rover_ws/devel/lib/python2.7/dist-packages/auto_navi/msg/_try1.py
 8019c7da6222753ee7e7e2311720bd21 /home/hit_ter/rover_ws/devel/lib/python2.7/dist-packages/auto_navi/msg/_try2.py
+6a74e7fd2f47707aff00443188caf0f1 /home/hit_ter/rover_ws/devel/lib/python2.7/dist-packages/auto_navi/msg/_try3.py
 bfc73d35bd3a74039bd667f49343bccf /home/hit_ter/rover_ws/devel/lib/python2.7/dist-packages/polled_camera/srv/_GetPolledImage.py
 3cb25fe1a1584695343a5d103e1455f9 /home/hit_ter/rover_ws/devel/lib/python2.7/dist-packages/polled_camera/srv/__init__.py
 9e4cd0dbceddf0d2514683c072060d77 /home/hit_ter/rover_ws/devel/lib/python2.7/dist-packages/ps3joy/msg/__init__.py
@@ -49,6 +51,7 @@ ca2e7cac33844adc1cdb5030e615a1e9 /home/hit_ter/rover_ws/devel/lib/python2.7/dist
 6fcb654b573456ca3fc9faf7549eea91 /home/hit_ter/rover_ws/devel/share/common-lisp/ros/auto_navi/msg/gps_data.lisp
 ee8501053165760a05022d8563bb8004 /home/hit_ter/rover_ws/devel/share/common-lisp/ros/auto_navi/msg/try1.lisp
 e8d521942e24aef3f2402b93bf989fd8 /home/hit_ter/rover_ws/devel/share/common-lisp/ros/auto_navi/msg/try2.lisp
+68125269abd3683ff074f813022ade22 /home/hit_ter/rover_ws/devel/share/common-lisp/ros/auto_navi/msg/try3.lisp
 ab0c2a2bf0584350f2c9097273e5a83b /home/hit_ter/rover_ws/devel/share/common-lisp/ros/polled_camera/srv/GetPolledImage.lisp
 5ad909a568d8d359e5db959f57ef1690 /home/hit_ter/rover_ws/devel/share/common-lisp/ros/ps3joy/msg/try2.lisp
 fed66275a0e973ff2c1166165035f930 /home/hit_ter/rover_ws/devel/share/common-lisp/ros/robotic_arm/msg/ghusa.lisp
@@ -67,6 +70,7 @@ bdf2500dfd6c535262446bd2fac29a40 /home/hit_ter/rover_ws/devel/share/common-lisp/
 91aca23ed6dc6c1e2c2532bf85bd3c55 /home/hit_ter/rover_ws/devel/share/gennodejs/ros/auto_navi/msg/gps_data.js
 1a612481f8ffbcff99f24ea8af09140d /home/hit_ter/rover_ws/devel/share/gennodejs/ros/auto_navi/msg/try1.js
 44c833ab1402d734969d7c795d072b55 /home/hit_ter/rover_ws/devel/share/gennodejs/ros/auto_navi/msg/try2.js
+e190aefacc8f979268e3b91a351800b3 /home/hit_ter/rover_ws/devel/share/gennodejs/ros/auto_navi/msg/try3.js
 65403c4410877048b005de9e653b4931 /home/hit_ter/rover_ws/devel/share/gennodejs/ros/polled_camera/srv/GetPolledImage.js
 9cb40412026cd54aa1349aa43f3c6c02 /home/hit_ter/rover_ws/devel/share/gennodejs/ros/ps3joy/msg/try2.js
 46c2ae6b3c52c5ee5c09131c19f2c5f8 /home/hit_ter/rover_ws/devel/share/gennodejs/ros/robotic_arm/msg/ghusa.js
@@ -86,6 +90,7 @@ be0954401e19ff624224803513ba773b /home/hit_ter/rover_ws/devel/share/gennodejs/ro
 fa5b761752adedfe1414ee59292454ea /home/hit_ter/rover_ws/devel/share/roseus/ros/auto_navi/msg/gps_data.l
 e135098b03a30e5a665aa60274d715be /home/hit_ter/rover_ws/devel/share/roseus/ros/auto_navi/msg/try1.l
 6c20e0beb1ff4f4ea84021cd34f0ccb7 /home/hit_ter/rover_ws/devel/share/roseus/ros/auto_navi/msg/try2.l
+989a816fce47dcb10f82dfee2cd77cf8 /home/hit_ter/rover_ws/devel/share/roseus/ros/auto_navi/msg/try3.l
 9d032f77474b514129b955518f3ece71 /home/hit_ter/rover_ws/devel/share/roseus/ros/polled_camera/manifest.l
 46fdb91137a9a1d8accb5e5414d2b175 /home/hit_ter/rover_ws/devel/share/roseus/ros/polled_camera/srv/GetPolledImage.l
 08c031020a824480ba4016d64a7e2939 /home/hit_ter/rover_ws/devel/share/roseus/ros/ps3joy/manifest.l
@@ -111,6 +116,7 @@ d3d660f59150b527358895b3ce2d6491 /home/hit_ter/rover_ws/devel/share/roseus/ros/w
 2c0dfb9212fe65af7fee82788ce4f95f CMakeFiles/clean_test_results
 451c1fb25dd66ad926e8b6daf7e6080e auto_navi/CMakeFiles/_auto_navi_generate_messages_check_deps_try1
 e06e136427768e37f129d0001d3e2bce auto_navi/CMakeFiles/_auto_navi_generate_messages_check_deps_try2
+960283a071d34e75fe3467b7d814e88b auto_navi/CMakeFiles/_auto_navi_generate_messages_check_deps_try3
 96beb48aebd77ef0dd946d0d927abe5c auto_navi/CMakeFiles/auto_navi_generate_messages_cpp
 96beb48aebd77ef0dd946d0d927abe5c auto_navi/CMakeFiles/auto_navi_generate_messages_eus
 96beb48aebd77ef0dd946d0d927abe5c auto_navi/CMakeFiles/auto_navi_generate_messages_lisp
@@ -133,6 +139,13 @@ c8d0d9c6067ba9ca00556b9b29453cde image_common/polled_camera/CMakeFiles/polled_ca
 c8d0d9c6067ba9ca00556b9b29453cde image_common/polled_camera/CMakeFiles/polled_camera_generate_messages_lisp
 c8d0d9c6067ba9ca00556b9b29453cde image_common/polled_camera/CMakeFiles/polled_camera_generate_messages_nodejs
 c8d0d9c6067ba9ca00556b9b29453cde image_common/polled_camera/CMakeFiles/polled_camera_generate_messages_py
+f004e911c2e0126ef1fb95b943ff1e32 mavros/CMakeFiles/_run_tests_mavros_gtest_libmavros-frame-conversions-test
+37cc659b4110958a51467157605988ef mavros/CMakeFiles/_run_tests_mavros_gtest_libmavros-quaternion-utils-test
+6f27a7bdf7bb3f2125fcb02a535faa7f mavros/CMakeFiles/_run_tests_mavros_gtest_libmavros-sensor-orientation-test
+46656cbec36def21c0652e5d701844a2 mavros/CMakeFiles/clean_test_results_mavros
+f004e911c2e0126ef1fb95b943ff1e32 mavros/CMakeFiles/run_tests_mavros_gtest_libmavros-frame-conversions-test
+37cc659b4110958a51467157605988ef mavros/CMakeFiles/run_tests_mavros_gtest_libmavros-quaternion-utils-test
+6f27a7bdf7bb3f2125fcb02a535faa7f mavros/CMakeFiles/run_tests_mavros_gtest_libmavros-sensor-orientation-test
 3db51fddcd7df75e9ab3cd89954bc84c ps3joy/CMakeFiles/_ps3joy_generate_messages_check_deps_try2
 f61a0cde02ca8de0a6f980de59c36be3 ps3joy/CMakeFiles/ps3joy_generate_messages_cpp
 f61a0cde02ca8de0a6f980de59c36be3 ps3joy/CMakeFiles/ps3joy_generate_messages_eus

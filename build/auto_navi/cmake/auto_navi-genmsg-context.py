@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/hit_ter/rover_ws/src/auto_navi/msg/try1.msg;/home/hit_ter/rover_ws/src/auto_navi/msg/try2.msg"
+messages_str = "/home/hit_ter/rover_ws/src/auto_navi/msg/try1.msg;/home/hit_ter/rover_ws/src/auto_navi/msg/try2.msg;/home/hit_ter/rover_ws/src/auto_navi/msg/try3.msg"
 services_str = ""
 pkg_name = "auto_navi"
 dependencies_str = "std_msgs"

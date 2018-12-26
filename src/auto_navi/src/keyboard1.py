@@ -62,30 +62,36 @@ if __name__=="__main__":
 
             key = getKey()
 
-            if(key=='w'):
-                z = z +1 
-            if(key=='s'):
+            if(key=='1'):
+                MOTOR_SPEED=30
+                pub.publish 
+            if(key=='2'):
+                MOTOR_SPEED=50
                 z = z -1
-            if(key=='a'):
+            if(key=='3'):
+                MOTOR_SPEED=70
                 y = y +1
-            if(key=='d'):
+            if(key=='4'):
+                MOTOR_SPEED=90
                 y = y -1
-            if(key=='q'):
+            if(key=='5'):
+                MOTOR_SPEED=100
                 x = x +1
-            if(key=='e'):
+            if(key=='6'):
+                MOTOR_SPEED=110
                 x = x -1    
             if(key == '\x03'):
                     break
 	    print("X=",x ," Y=",y ," Z=",z)
 
                      
-        point = Point()
+            point = Point()
 	
-	print(x)
+	    #print(x)
 
-        point.x = x;point.y=y;point.z=z;
+            point.x = x;point.y=y;point.z=z;
         
-        pub.publish(point)     
+            pub.publish(point)     
 
     except Exception as e:
         print(e)
