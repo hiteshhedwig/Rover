@@ -6,11 +6,10 @@ import geopy.distance
 import math
 from auto_navi.msg import try1, try3
 import time
-#import message_filters
 
 
 
-
+pub= rospy.Publisher("turning_cmd", Int32, queue_size=10)
 
 '''
 global a
@@ -79,36 +78,94 @@ def callback(data):
 '''
 
 
-#def callback1(data):
-    #rospy.loginfo(rospy.get_caller_id() + "\nGPS:\nLat: [{}]\nLong: [{}]\nAlti: [{}]".
-    #format(data.latitude, data.longitude, data.altitude))
-#    dist_cal(data.latitude, data.longitude)
-
 def callback(data):
     #rospy.loginfo(rospy.get_caller_id() + "\nGPS:\nLat: [{}]\nLong: [{}]\nAlti: [{}]".
     #format(data.latitude, data.longitude, data.altitude))
-    msg=try3()
-    msg.lat= data.latitude
-    msg.long= data.longitude
-    pub.publish(msg)
-  
+    dist_cal(data.latitude, data.longitude)
+
+
+def callback1(data):
+
+    cX=data.X
+    cY=data.Y
+    transfer(cX,cY)
+
+def transfer(cX,cY):
+
+    X= cX
+    Y=cY
+    return Y
+
+def dist_cal(a,b):
+    coords_1 = (a, b)
+    coords_2 = (x, y)
+    dist= geopy.distance.distance(coords_1, coords_2).m
+    print dist
+    #dist = 40
+    #msg1= try3()
+    #cY=msg1.y
+
+    msg=Int32()
+   # print cY
+    
+
+    cY = transfer(Y)
+    if dist> 0 
+      if cY<350:
+     #if a in range (90,488):
+      #if b in range (0,350):
+       #Turn MOTOR FORWARD
+       MOTOR_SPEED= 60
+       msg.data= MOTOR_SPEED
+       print "forward"
+       #print cY
+       pub.publish(msg)
+
+
+    if dist> 0 :
+           #if a in range (90,488):
+      #if b in range (0,350):
+       #Turn MOTOR FORWARD
+       MOTOR_SPEED= 60
+       msg.data= MOTOR_SPEED
+       print "forward"
+       #print cY
+       pub.publish(msg)
+
+
+    if dist>0:
+      #cY = transfer(Y)
+      if cY>=350:
+       MOTOR_SPEED= 0
+       print "stop"
+       msg.data= MOTOR_SPEED
+       pub.publish(msg) 
+ 
+
+    if dist<=3 :
+      MOTOR_SPEED= 0
+      print "stop"
+      msg.data= MOTOR_SPEED
+      pub.publish(msg) 
+ 
+
+
 
 
 def gyros():
     rospy.init_node('gpps', anonymous=True)
     rospy.Subscriber("/mavros/global_position/global", NavSatFix, callback)
-    pub= rospy.Publisher("coordinates1", try3, queue_size=10)
+
     #rospy.Subscriber("/mavros/global_position/compass_hdg", Float64, callback1)
     #gps= message_filters.Subscriber("/mavros/global_position/global", NavSatFix)
-    #coordinates=message_filters.Subscriber("coordinates1", try3)
-    #ts= message_filters.TimeSynchronizer([gps,coordinates], 10)
-    #ts.registerCallback(callback)
+    rospy.Subscriber("coordinates1", try3,callback1)
+
     rospy.spin()
     
 
 if __name__ == '__main__':
     print "started!!"
-    #pub= rospy.Publisher("turning_cmd", Int32)
+    #pub= rospy.Publisher("turning_cmd", Int32,queue_size=10)
     x = float(raw_input('latitude: '))
     y =float(raw_input('longitude: '))
     gyros()

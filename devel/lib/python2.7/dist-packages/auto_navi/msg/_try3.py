@@ -7,14 +7,16 @@ import struct
 
 
 class try3(genpy.Message):
-  _md5sum = "209f516d3eb691f0663e25cb750d67c1"
+  _md5sum = "d1aba966ad6a1f4a1f3e7976f86d20de"
   _type = "auto_navi/try3"
   _has_header = False #flag to mark the presence of a Header object
-  _full_text = """float64 x
-float64 y
+  _full_text = """float64 lat
+float64 long
+float64 X
+float64 Y
 """
-  __slots__ = ['x','y']
-  _slot_types = ['float64','float64']
+  __slots__ = ['lat','long','X','Y']
+  _slot_types = ['float64','float64','float64','float64']
 
   def __init__(self, *args, **kwds):
     """
@@ -24,7 +26,7 @@ float64 y
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       x,y
+       lat,long,X,Y
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -33,13 +35,19 @@ float64 y
     if args or kwds:
       super(try3, self).__init__(*args, **kwds)
       #message fields cannot be None, assign default values for those that are
-      if self.x is None:
-        self.x = 0.
-      if self.y is None:
-        self.y = 0.
+      if self.lat is None:
+        self.lat = 0.
+      if self.long is None:
+        self.long = 0.
+      if self.X is None:
+        self.X = 0.
+      if self.Y is None:
+        self.Y = 0.
     else:
-      self.x = 0.
-      self.y = 0.
+      self.lat = 0.
+      self.long = 0.
+      self.X = 0.
+      self.Y = 0.
 
   def _get_types(self):
     """
@@ -54,7 +62,7 @@ float64 y
     """
     try:
       _x = self
-      buff.write(_get_struct_2d().pack(_x.x, _x.y))
+      buff.write(_get_struct_4d().pack(_x.lat, _x.long, _x.X, _x.Y))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -67,8 +75,8 @@ float64 y
       end = 0
       _x = self
       start = end
-      end += 16
-      (_x.x, _x.y,) = _get_struct_2d().unpack(str[start:end])
+      end += 32
+      (_x.lat, _x.long, _x.X, _x.Y,) = _get_struct_4d().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -82,7 +90,7 @@ float64 y
     """
     try:
       _x = self
-      buff.write(_get_struct_2d().pack(_x.x, _x.y))
+      buff.write(_get_struct_4d().pack(_x.lat, _x.long, _x.X, _x.Y))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -96,8 +104,8 @@ float64 y
       end = 0
       _x = self
       start = end
-      end += 16
-      (_x.x, _x.y,) = _get_struct_2d().unpack(str[start:end])
+      end += 32
+      (_x.lat, _x.long, _x.X, _x.Y,) = _get_struct_4d().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -106,9 +114,9 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
-_struct_2d = None
-def _get_struct_2d():
-    global _struct_2d
-    if _struct_2d is None:
-        _struct_2d = struct.Struct("<2d")
-    return _struct_2d
+_struct_4d = None
+def _get_struct_4d():
+    global _struct_4d
+    if _struct_4d is None:
+        _struct_4d = struct.Struct("<4d")
+    return _struct_4d

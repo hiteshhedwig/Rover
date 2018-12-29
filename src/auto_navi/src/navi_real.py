@@ -16,7 +16,7 @@ from auto_navi.msg import try1
 def processImage():
    
    # img = br.imgmsg_to_cv2(imgmsg,"bgr8")
-   cap= cv2.VideoCapture(0)
+   cap= cv2.VideoCapture(1)
    #rospy.loginfo("Detecting....")
  
    '''

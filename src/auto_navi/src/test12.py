@@ -9,58 +9,62 @@ global cX
 global cY
 #def callback(data):
 #    rospy.loginfo(rospy.get_caller_id() + " %s", data.data)
-pub= rospy.Publisher("coordinates1", try3, queue_size= 10)
+
 
 def callback1(data):
     rospy.loginfo("cX : %f, cY: %f" % (data.cX, data.cY))
-    calc(data.cX,data.cY)
+    cX=data.cX
+    cY=data.cY
+    calc(cX,cY)
 
 def calc(cX,cY):
+    pub= rospy.Publisher("coordinates1", try3, queue_size= 10)
+    msg=try3()   
     # angle measurement
     if cY<350:
+     if cX in range (90,488):
+     #msg sent to arduino via ROS
+    
+        msg.X=cX
+        msg.Y=cY
+        pub.publish(msg)
+
+ 
      
-     steer(cX,cY)
     if cY>= 350: 
-     angR= math.atan2((cY-478),(cX-488))
-     angL= math.atan2((cY-478),(cX-90))
-  #making it positive
-     angleR= math.fabs(math.degrees(angR))
-     angleL= math.fabs(math.degrees(angL))
-     if cX> 244:
-         print 'pixel location of contour,  X : ', cX, ' Y :', cY
-         print 'angle :', angleR
-         angle = angleR
-         steer_ang= angle - 90
-         steer(cX,cY)
-     if cX<= 244:
-         print 'pixel location of contour,  X : ', cX, ' Y :', cY
-         print 'angle :', angleL
-         angle= angleL
-        #in reference to relative frame
-         steer_ang= angle - 90
-         steer(cX,cY)
+     if cX in range (90,488):
+     #msg sent to arduino via ROS
+    
+        msg.X=cX
+        msg.Y=cY
+        pub.publish(msg)
+
+    #print ("command to steer right by angle:", a)
+
+
+'''
 
 def steer(cX,cY):
-  msg=try3()
+ 
   if cX in range (90,244):
      #msg sent to arduino via ROS
     
-    msg.x=cX
-    msg.y=cY
+    msg.X=cX
+    msg.Y=cY
     pub.publish(msg)
 
     #print ("command to steer right by angle:", a)
 
   if cX in range (244, 488):
-    
-    msg.x=cX
-    msg.y=cY
+
+    msg.X=cX
+    msg.Y=cY
     pub.publish(msg)
 
     #print ("command to steer left by angle:" ,a)
 
   return 0
-
+'''
  
 
 
@@ -72,6 +76,7 @@ def listener():
     rospy.Subscriber("trying2", try1, callback1)
 
 if __name__ == '__main__':
+    print "started"
     listener()
     rospy.spin()
 

@@ -1,5 +1,9 @@
 (cl:in-package auto_navi-msg)
-(cl:export '(X-VAL
+(cl:export '(LAT-VAL
+          LAT
+          LONG-VAL
+          LONG
+          X-VAL
           X
           Y-VAL
           Y

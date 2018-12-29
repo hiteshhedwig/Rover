@@ -2,7 +2,7 @@
 	<!-- vim: set ft=xml noet : -->
 	<!-- example launch script for PX4 based FCU's -->
 
-        <node pkg="imu_data" type= "gps12.py" name= "gps12" output="screen" launch-prefix= "gnome-terminal --command" />
+
         <node pkg="imu_data" type= "gyro.py" name= "gyro" output="screen" launch-prefix= "gnome-terminal --command" />
 
 

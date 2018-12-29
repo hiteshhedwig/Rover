@@ -9,16 +9,16 @@ from std_msgs.msg import Int32
 #    rospy.loginfo(rospy.get_caller_id() + " %s", data.data)
 pub= rospy.Publisher("turning_cmd", Int32, queue_size=10)
 def callback1(data):
-    rospy.loginfo("cX : %f, cY: %f" % (data.x, data.y))
+    rospy.loginfo("cX : %f, cY: %f" % (data.X, data.Y))
     
-    calc(data.x,data.y)
+    calc(data.X,data.Y)
 
 def calc(x,y):
     # angle measurement
     dist = 40
     msg= Int32()
     
-    if dist> 0 or y<350 :
+    if dist> 0 :
      #if y<350:
             
        MOTOR_SPEED= 50

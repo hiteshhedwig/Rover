@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<launch>
+      
+
+
+      
+      <node pkg="auto_navi" type= "keyboard1.py" name= "keyboard1" output="screen" launch-prefix= "gnome-terminal --command" />
+      
+      <node pkg="auto_navi" type= "timercal.py" name= "timercal" output="screen" launch-prefix= "gnome-terminal --command" />
+
+</launch>
+

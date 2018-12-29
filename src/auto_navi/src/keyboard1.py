@@ -3,24 +3,22 @@
 from __future__ import print_function
 
 import rospy
-
-from geometry_msgs.msg import Point
+from std_msgs.msg import Int32
+from auto_navi.msg import try2
 
 import sys, select, termios, tty
 
 
-msg = """
-Reading from the keyboard and Publishing to Twist!
+msg1 = """
+Reading from the keyboard and Publishing!
 ---------------------------------------------------
-Moving around :
-   w   a    q
-   s   d    e 
+forward drive :
+   q[30] w[50] e[70] r[90] t[100] y[120]
+   
+backward drive :
+   a[30] s[50] d[70] f[90] g[100] h[120]
 
-anything else : stop
-
-w/s : increase/decrease x axis 
-a/d : increase/decrease y axis
-q/e : increase/decrease  z axis
+ Space : stop
 
 CTRL-C to quit
 """  
@@ -38,67 +36,100 @@ if __name__=="__main__":
     
     settings = termios.tcgetattr(sys.stdin)
 
-    pub = rospy.Publisher('co_ordinates', Point)
+    pub = rospy.Publisher('rover_drive', try2, queue_size = 10)
     
     rospy.init_node('keyboard1')
     
-    a = 10 ;
-    
-    b = 20 ;
-      	
-    c = 30 ;
- 
-    x = a ;
-    
-    y = b ;
-    
-    z = c ;
-    
-    
     try:
-        print(msg)
+        print (msg1)
 
         while(1):
 
             key = getKey()
-
-            if(key=='1'):
+            msg= try2()
+            if(key=='q'):
                 MOTOR_SPEED=30
-                pub.publish 
-            if(key=='2'):
+                msg.forward_speed= MOTOR_SPEED
+                msg.backward_speed= 0
+                print (MOTOR_SPEED)
+                pub.publish(msg)
+            if(key=='w'):
                 MOTOR_SPEED=50
-                z = z -1
-            if(key=='3'):
+                msg.forward_speed= MOTOR_SPEED
+                msg.backward_speed= 0
+                print (MOTOR_SPEED)
+                pub.publish(msg)                
+            if(key=='e'):
                 MOTOR_SPEED=70
-                y = y +1
-            if(key=='4'):
+                msg.forward_speed= MOTOR_SPEED
+                msg.backward_speed= 0
+                print (MOTOR_SPEED)
+                pub.publish(msg)               
+            if(key=='r'):
                 MOTOR_SPEED=90
-                y = y -1
-            if(key=='5'):
+                msg.forward_speed= MOTOR_SPEED
+                msg.backward_speed= 0
+                print (MOTOR_SPEED)
+                pub.publish(msg)                
+            if(key=='t'):
                 MOTOR_SPEED=100
-                x = x +1
-            if(key=='6'):
-                MOTOR_SPEED=110
-                x = x -1    
-            if(key == '\x03'):
-                    break
-	    print("X=",x ," Y=",y ," Z=",z)
-
-                     
-            point = Point()
-	
-	    #print(x)
-
-            point.x = x;point.y=y;point.z=z;
-        
-            pub.publish(point)     
+                msg.forward_speed= MOTOR_SPEED
+                msg.backward_speed= 0
+                print (MOTOR_SPEED)
+                pub.publish(msg)                
+            if(key=='y'):
+                MOTOR_SPEED=120
+                msg.forward_speed= MOTOR_SPEED
+                msg.backward_speed= 0
+                print (MOTOR_SPEED)
+                pub.publish(msg)                   
+            if(key == ' '):
+                MOTOR_SPEED=0
+                msg.forward_speed= MOTOR_SPEED
+                msg.backward_speed= MOTOR_SPEED
+                print (MOTOR_SPEED)
+                pub.publish(msg)
+            if(key=='a'):
+                MOTOR_SPEED=30
+                msg.forward_speed= 0
+                msg.backward_speed= MOTOR_SPEED
+                print (MOTOR_SPEED)
+                pub.publish(msg)
+            if(key=='s'):
+                MOTOR_SPEED=50
+                msg.forward_speed= 0
+                msg.backward_speed= MOTOR_SPEED
+                print (MOTOR_SPEED)
+                pub.publish(msg)                
+            if(key=='d'):
+                MOTOR_SPEED=70
+                msg.forward_speed= 0
+                msg.backward_speed= MOTOR_SPEED
+                print (MOTOR_SPEED)
+                pub.publish(msg)                
+            if(key=='f'):
+                MOTOR_SPEED=90
+                msg.forward_speed= 0
+                msg.backward_speed= MOTOR_SPEED
+                print (MOTOR_SPEED)
+                pub.publish(msg)                
+            if(key=='g'):
+                MOTOR_SPEED=100
+                msg.forward_speed= 0
+                msg.backward_speed= MOTOR_SPEED
+                print (MOTOR_SPEED)
+                pub.publish(msg)                
+            if(key=='h'):
+                MOTOR_SPEED=120
+                msg.forward_speed= 0
+                msg.backward_speed= MOTOR_SPEED
+                print (MOTOR_SPEED)
+                pub.publish(msg)                   
 
     except Exception as e:
         print(e)
 
     finally:
-        point = Point()
-        point.x = a; point.linear.y = b; point.linear.z = c
         termios.tcsetattr(sys.stdin, termios.TCSADRAIN, settings)
     rospy.spin()
 

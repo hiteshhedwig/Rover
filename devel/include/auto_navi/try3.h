@@ -24,22 +24,32 @@ struct try3_
   typedef try3_<ContainerAllocator> Type;
 
   try3_()
-    : x(0.0)
-    , y(0.0)  {
+    : lat(0.0)
+    , long(0.0)
+    , X(0.0)
+    , Y(0.0)  {
     }
   try3_(const ContainerAllocator& _alloc)
-    : x(0.0)
-    , y(0.0)  {
+    : lat(0.0)
+    , long(0.0)
+    , X(0.0)
+    , Y(0.0)  {
   (void)_alloc;
     }
 
 
 
-   typedef double _x_type;
-  _x_type x;
+   typedef double _lat_type;
+  _lat_type lat;
 
-   typedef double _y_type;
-  _y_type y;
+   typedef double _long_type;
+  _long_type long;
+
+   typedef double _X_type;
+  _X_type X;
+
+   typedef double _Y_type;
+  _Y_type Y;
 
 
 
@@ -119,12 +129,12 @@ struct MD5Sum< ::auto_navi::try3_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "209f516d3eb691f0663e25cb750d67c1";
+    return "d1aba966ad6a1f4a1f3e7976f86d20de";
   }
 
   static const char* value(const ::auto_navi::try3_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x209f516d3eb691f0ULL;
-  static const uint64_t static_value2 = 0x663e25cb750d67c1ULL;
+  static const uint64_t static_value1 = 0xd1aba966ad6a1f4aULL;
+  static const uint64_t static_value2 = 0x1f3e7976f86d20deULL;
 };
 
 template<class ContainerAllocator>
@@ -143,8 +153,10 @@ struct Definition< ::auto_navi::try3_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "float64 x\n\
-float64 y\n\
+    return "float64 lat\n\
+float64 long\n\
+float64 X\n\
+float64 Y\n\
 ";
   }
 
@@ -163,8 +175,10 @@ namespace serialization
   {
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
-      stream.next(m.x);
-      stream.next(m.y);
+      stream.next(m.lat);
+      stream.next(m.long);
+      stream.next(m.X);
+      stream.next(m.Y);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -183,10 +197,14 @@ struct Printer< ::auto_navi::try3_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::auto_navi::try3_<ContainerAllocator>& v)
   {
-    s << indent << "x: ";
-    Printer<double>::stream(s, indent + "  ", v.x);
-    s << indent << "y: ";
-    Printer<double>::stream(s, indent + "  ", v.y);
+    s << indent << "lat: ";
+    Printer<double>::stream(s, indent + "  ", v.lat);
+    s << indent << "long: ";
+    Printer<double>::stream(s, indent + "  ", v.long);
+    s << indent << "X: ";
+    Printer<double>::stream(s, indent + "  ", v.X);
+    s << indent << "Y: ";
+    Printer<double>::stream(s, indent + "  ", v.Y);
   }
 };
 

@@ -18,31 +18,49 @@ class try3 {
   constructor(initObj={}) {
     if (initObj === null) {
       // initObj === null is a special case for deserialization where we don't initialize fields
-      this.x = null;
-      this.y = null;
+      this.lat = null;
+      this.long = null;
+      this.X = null;
+      this.Y = null;
     }
     else {
-      if (initObj.hasOwnProperty('x')) {
-        this.x = initObj.x
+      if (initObj.hasOwnProperty('lat')) {
+        this.lat = initObj.lat
       }
       else {
-        this.x = 0.0;
+        this.lat = 0.0;
       }
-      if (initObj.hasOwnProperty('y')) {
-        this.y = initObj.y
+      if (initObj.hasOwnProperty('long')) {
+        this.long = initObj.long
       }
       else {
-        this.y = 0.0;
+        this.long = 0.0;
+      }
+      if (initObj.hasOwnProperty('X')) {
+        this.X = initObj.X
+      }
+      else {
+        this.X = 0.0;
+      }
+      if (initObj.hasOwnProperty('Y')) {
+        this.Y = initObj.Y
+      }
+      else {
+        this.Y = 0.0;
       }
     }
   }
 
   static serialize(obj, buffer, bufferOffset) {
     // Serializes a message object of type try3
-    // Serialize message field [x]
-    bufferOffset = _serializer.float64(obj.x, buffer, bufferOffset);
-    // Serialize message field [y]
-    bufferOffset = _serializer.float64(obj.y, buffer, bufferOffset);
+    // Serialize message field [lat]
+    bufferOffset = _serializer.float64(obj.lat, buffer, bufferOffset);
+    // Serialize message field [long]
+    bufferOffset = _serializer.float64(obj.long, buffer, bufferOffset);
+    // Serialize message field [X]
+    bufferOffset = _serializer.float64(obj.X, buffer, bufferOffset);
+    // Serialize message field [Y]
+    bufferOffset = _serializer.float64(obj.Y, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -50,15 +68,19 @@ class try3 {
     //deserializes a message object of type try3
     let len;
     let data = new try3(null);
-    // Deserialize message field [x]
-    data.x = _deserializer.float64(buffer, bufferOffset);
-    // Deserialize message field [y]
-    data.y = _deserializer.float64(buffer, bufferOffset);
+    // Deserialize message field [lat]
+    data.lat = _deserializer.float64(buffer, bufferOffset);
+    // Deserialize message field [long]
+    data.long = _deserializer.float64(buffer, bufferOffset);
+    // Deserialize message field [X]
+    data.X = _deserializer.float64(buffer, bufferOffset);
+    // Deserialize message field [Y]
+    data.Y = _deserializer.float64(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
-    return 16;
+    return 32;
   }
 
   static datatype() {
@@ -68,14 +90,16 @@ class try3 {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '209f516d3eb691f0663e25cb750d67c1';
+    return 'd1aba966ad6a1f4a1f3e7976f86d20de';
   }
 
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    float64 x
-    float64 y
+    float64 lat
+    float64 long
+    float64 X
+    float64 Y
     
     `;
   }
@@ -86,18 +110,32 @@ class try3 {
       msg = {};
     }
     const resolved = new try3(null);
-    if (msg.x !== undefined) {
-      resolved.x = msg.x;
+    if (msg.lat !== undefined) {
+      resolved.lat = msg.lat;
     }
     else {
-      resolved.x = 0.0
+      resolved.lat = 0.0
     }
 
-    if (msg.y !== undefined) {
-      resolved.y = msg.y;
+    if (msg.long !== undefined) {
+      resolved.long = msg.long;
     }
     else {
-      resolved.y = 0.0
+      resolved.long = 0.0
+    }
+
+    if (msg.X !== undefined) {
+      resolved.X = msg.X;
+    }
+    else {
+      resolved.X = 0.0
+    }
+
+    if (msg.Y !== undefined) {
+      resolved.Y = msg.Y;
+    }
+    else {
+      resolved.Y = 0.0
     }
 
     return resolved;
