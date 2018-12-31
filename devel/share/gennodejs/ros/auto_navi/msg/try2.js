@@ -20,6 +20,8 @@ class try2 {
       // initObj === null is a special case for deserialization where we don't initialize fields
       this.forward_speed = null;
       this.backward_speed = null;
+      this.turning_right = null;
+      this.turning_left = null;
     }
     else {
       if (initObj.hasOwnProperty('forward_speed')) {
@@ -34,6 +36,18 @@ class try2 {
       else {
         this.backward_speed = 0;
       }
+      if (initObj.hasOwnProperty('turning_right')) {
+        this.turning_right = initObj.turning_right
+      }
+      else {
+        this.turning_right = 0;
+      }
+      if (initObj.hasOwnProperty('turning_left')) {
+        this.turning_left = initObj.turning_left
+      }
+      else {
+        this.turning_left = 0;
+      }
     }
   }
 
@@ -43,6 +57,10 @@ class try2 {
     bufferOffset = _serializer.int64(obj.forward_speed, buffer, bufferOffset);
     // Serialize message field [backward_speed]
     bufferOffset = _serializer.int64(obj.backward_speed, buffer, bufferOffset);
+    // Serialize message field [turning_right]
+    bufferOffset = _serializer.int64(obj.turning_right, buffer, bufferOffset);
+    // Serialize message field [turning_left]
+    bufferOffset = _serializer.int64(obj.turning_left, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -54,11 +72,15 @@ class try2 {
     data.forward_speed = _deserializer.int64(buffer, bufferOffset);
     // Deserialize message field [backward_speed]
     data.backward_speed = _deserializer.int64(buffer, bufferOffset);
+    // Deserialize message field [turning_right]
+    data.turning_right = _deserializer.int64(buffer, bufferOffset);
+    // Deserialize message field [turning_left]
+    data.turning_left = _deserializer.int64(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
-    return 16;
+    return 32;
   }
 
   static datatype() {
@@ -68,7 +90,7 @@ class try2 {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return 'a699297f96ff3ce6d6e9694c1dea07b8';
+    return '892f64bf0a5492a565a4134ba1936c83';
   }
 
   static messageDefinition() {
@@ -76,6 +98,8 @@ class try2 {
     return `
     int64 forward_speed
     int64 backward_speed
+    int64 turning_right
+    int64 turning_left
     
     `;
   }
@@ -98,6 +122,20 @@ class try2 {
     }
     else {
       resolved.backward_speed = 0
+    }
+
+    if (msg.turning_right !== undefined) {
+      resolved.turning_right = msg.turning_right;
+    }
+    else {
+      resolved.turning_right = 0
+    }
+
+    if (msg.turning_left !== undefined) {
+      resolved.turning_left = msg.turning_left;
+    }
+    else {
+      resolved.turning_left = 0
     }
 
     return resolved;

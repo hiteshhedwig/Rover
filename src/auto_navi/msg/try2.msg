@@ -1,2 +1,4 @@
 int64 forward_speed
 int64 backward_speed
+int64 turning_right
+int64 turning_left

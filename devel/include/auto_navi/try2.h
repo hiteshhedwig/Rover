@@ -25,11 +25,15 @@ struct try2_
 
   try2_()
     : forward_speed(0)
-    , backward_speed(0)  {
+    , backward_speed(0)
+    , turning_right(0)
+    , turning_left(0)  {
     }
   try2_(const ContainerAllocator& _alloc)
     : forward_speed(0)
-    , backward_speed(0)  {
+    , backward_speed(0)
+    , turning_right(0)
+    , turning_left(0)  {
   (void)_alloc;
     }
 
@@ -40,6 +44,12 @@ struct try2_
 
    typedef int64_t _backward_speed_type;
   _backward_speed_type backward_speed;
+
+   typedef int64_t _turning_right_type;
+  _turning_right_type turning_right;
+
+   typedef int64_t _turning_left_type;
+  _turning_left_type turning_left;
 
 
 
@@ -119,12 +129,12 @@ struct MD5Sum< ::auto_navi::try2_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "a699297f96ff3ce6d6e9694c1dea07b8";
+    return "892f64bf0a5492a565a4134ba1936c83";
   }
 
   static const char* value(const ::auto_navi::try2_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0xa699297f96ff3ce6ULL;
-  static const uint64_t static_value2 = 0xd6e9694c1dea07b8ULL;
+  static const uint64_t static_value1 = 0x892f64bf0a5492a5ULL;
+  static const uint64_t static_value2 = 0x65a4134ba1936c83ULL;
 };
 
 template<class ContainerAllocator>
@@ -145,6 +155,8 @@ struct Definition< ::auto_navi::try2_<ContainerAllocator> >
   {
     return "int64 forward_speed\n\
 int64 backward_speed\n\
+int64 turning_right\n\
+int64 turning_left\n\
 ";
   }
 
@@ -165,6 +177,8 @@ namespace serialization
     {
       stream.next(m.forward_speed);
       stream.next(m.backward_speed);
+      stream.next(m.turning_right);
+      stream.next(m.turning_left);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -187,6 +201,10 @@ struct Printer< ::auto_navi::try2_<ContainerAllocator> >
     Printer<int64_t>::stream(s, indent + "  ", v.forward_speed);
     s << indent << "backward_speed: ";
     Printer<int64_t>::stream(s, indent + "  ", v.backward_speed);
+    s << indent << "turning_right: ";
+    Printer<int64_t>::stream(s, indent + "  ", v.turning_right);
+    s << indent << "turning_left: ";
+    Printer<int64_t>::stream(s, indent + "  ", v.turning_left);
   }
 };
 

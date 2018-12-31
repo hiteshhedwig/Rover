@@ -16,6 +16,16 @@
     :reader backward_speed
     :initarg :backward_speed
     :type cl:integer
+    :initform 0)
+   (turning_right
+    :reader turning_right
+    :initarg :turning_right
+    :type cl:integer
+    :initform 0)
+   (turning_left
+    :reader turning_left
+    :initarg :turning_left
+    :type cl:integer
     :initform 0))
 )
 
@@ -36,6 +46,16 @@
 (cl:defmethod backward_speed-val ((m <try2>))
   (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader auto_navi-msg:backward_speed-val is deprecated.  Use auto_navi-msg:backward_speed instead.")
   (backward_speed m))
+
+(cl:ensure-generic-function 'turning_right-val :lambda-list '(m))
+(cl:defmethod turning_right-val ((m <try2>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader auto_navi-msg:turning_right-val is deprecated.  Use auto_navi-msg:turning_right instead.")
+  (turning_right m))
+
+(cl:ensure-generic-function 'turning_left-val :lambda-list '(m))
+(cl:defmethod turning_left-val ((m <try2>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader auto_navi-msg:turning_left-val is deprecated.  Use auto_navi-msg:turning_left instead.")
+  (turning_left m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <try2>) ostream)
   "Serializes a message object of type '<try2>"
   (cl:let* ((signed (cl:slot-value msg 'forward_speed)) (unsigned (cl:if (cl:< signed 0) (cl:+ signed 18446744073709551616) signed)))
@@ -49,6 +69,26 @@
     (cl:write-byte (cl:ldb (cl:byte 8 56) unsigned) ostream)
     )
   (cl:let* ((signed (cl:slot-value msg 'backward_speed)) (unsigned (cl:if (cl:< signed 0) (cl:+ signed 18446744073709551616) signed)))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 32) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 40) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 48) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 56) unsigned) ostream)
+    )
+  (cl:let* ((signed (cl:slot-value msg 'turning_right)) (unsigned (cl:if (cl:< signed 0) (cl:+ signed 18446744073709551616) signed)))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 32) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 40) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 48) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 56) unsigned) ostream)
+    )
+  (cl:let* ((signed (cl:slot-value msg 'turning_left)) (unsigned (cl:if (cl:< signed 0) (cl:+ signed 18446744073709551616) signed)))
     (cl:write-byte (cl:ldb (cl:byte 8 0) unsigned) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 8) unsigned) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 16) unsigned) ostream)
@@ -81,6 +121,26 @@
       (cl:setf (cl:ldb (cl:byte 8 48) unsigned) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 56) unsigned) (cl:read-byte istream))
       (cl:setf (cl:slot-value msg 'backward_speed) (cl:if (cl:< unsigned 9223372036854775808) unsigned (cl:- unsigned 18446744073709551616))))
+    (cl:let ((unsigned 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 32) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 40) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 48) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 56) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:slot-value msg 'turning_right) (cl:if (cl:< unsigned 9223372036854775808) unsigned (cl:- unsigned 18446744073709551616))))
+    (cl:let ((unsigned 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 32) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 40) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 48) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 56) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:slot-value msg 'turning_left) (cl:if (cl:< unsigned 9223372036854775808) unsigned (cl:- unsigned 18446744073709551616))))
   msg
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<try2>)))
@@ -91,18 +151,20 @@
   "auto_navi/try2")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<try2>)))
   "Returns md5sum for a message object of type '<try2>"
-  "a699297f96ff3ce6d6e9694c1dea07b8")
+  "892f64bf0a5492a565a4134ba1936c83")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'try2)))
   "Returns md5sum for a message object of type 'try2"
-  "a699297f96ff3ce6d6e9694c1dea07b8")
+  "892f64bf0a5492a565a4134ba1936c83")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<try2>)))
   "Returns full string definition for message of type '<try2>"
-  (cl:format cl:nil "int64 forward_speed~%int64 backward_speed~%~%~%"))
+  (cl:format cl:nil "int64 forward_speed~%int64 backward_speed~%int64 turning_right~%int64 turning_left~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'try2)))
   "Returns full string definition for message of type 'try2"
-  (cl:format cl:nil "int64 forward_speed~%int64 backward_speed~%~%~%"))
+  (cl:format cl:nil "int64 forward_speed~%int64 backward_speed~%int64 turning_right~%int64 turning_left~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <try2>))
   (cl:+ 0
+     8
+     8
      8
      8
 ))
@@ -111,4 +173,6 @@
   (cl:list 'try2
     (cl:cons ':forward_speed (forward_speed msg))
     (cl:cons ':backward_speed (backward_speed msg))
+    (cl:cons ':turning_right (turning_right msg))
+    (cl:cons ':turning_left (turning_left msg))
 ))

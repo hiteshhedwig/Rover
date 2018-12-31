@@ -7,14 +7,16 @@ import struct
 
 
 class try2(genpy.Message):
-  _md5sum = "a699297f96ff3ce6d6e9694c1dea07b8"
+  _md5sum = "892f64bf0a5492a565a4134ba1936c83"
   _type = "auto_navi/try2"
   _has_header = False #flag to mark the presence of a Header object
   _full_text = """int64 forward_speed
 int64 backward_speed
+int64 turning_right
+int64 turning_left
 """
-  __slots__ = ['forward_speed','backward_speed']
-  _slot_types = ['int64','int64']
+  __slots__ = ['forward_speed','backward_speed','turning_right','turning_left']
+  _slot_types = ['int64','int64','int64','int64']
 
   def __init__(self, *args, **kwds):
     """
@@ -24,7 +26,7 @@ int64 backward_speed
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       forward_speed,backward_speed
+       forward_speed,backward_speed,turning_right,turning_left
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -37,9 +39,15 @@ int64 backward_speed
         self.forward_speed = 0
       if self.backward_speed is None:
         self.backward_speed = 0
+      if self.turning_right is None:
+        self.turning_right = 0
+      if self.turning_left is None:
+        self.turning_left = 0
     else:
       self.forward_speed = 0
       self.backward_speed = 0
+      self.turning_right = 0
+      self.turning_left = 0
 
   def _get_types(self):
     """
@@ -54,7 +62,7 @@ int64 backward_speed
     """
     try:
       _x = self
-      buff.write(_get_struct_2q().pack(_x.forward_speed, _x.backward_speed))
+      buff.write(_get_struct_4q().pack(_x.forward_speed, _x.backward_speed, _x.turning_right, _x.turning_left))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -67,8 +75,8 @@ int64 backward_speed
       end = 0
       _x = self
       start = end
-      end += 16
-      (_x.forward_speed, _x.backward_speed,) = _get_struct_2q().unpack(str[start:end])
+      end += 32
+      (_x.forward_speed, _x.backward_speed, _x.turning_right, _x.turning_left,) = _get_struct_4q().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -82,7 +90,7 @@ int64 backward_speed
     """
     try:
       _x = self
-      buff.write(_get_struct_2q().pack(_x.forward_speed, _x.backward_speed))
+      buff.write(_get_struct_4q().pack(_x.forward_speed, _x.backward_speed, _x.turning_right, _x.turning_left))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -96,8 +104,8 @@ int64 backward_speed
       end = 0
       _x = self
       start = end
-      end += 16
-      (_x.forward_speed, _x.backward_speed,) = _get_struct_2q().unpack(str[start:end])
+      end += 32
+      (_x.forward_speed, _x.backward_speed, _x.turning_right, _x.turning_left,) = _get_struct_4q().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -106,9 +114,9 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
-_struct_2q = None
-def _get_struct_2q():
-    global _struct_2q
-    if _struct_2q is None:
-        _struct_2q = struct.Struct("<2q")
-    return _struct_2q
+_struct_4q = None
+def _get_struct_4q():
+    global _struct_4q
+    if _struct_4q is None:
+        _struct_4q = struct.Struct("<4q")
+    return _struct_4q

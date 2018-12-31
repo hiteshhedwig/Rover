@@ -3,4 +3,8 @@
           FORWARD_SPEED
           BACKWARD_SPEED-VAL
           BACKWARD_SPEED
+          TURNING_RIGHT-VAL
+          TURNING_RIGHT
+          TURNING_LEFT-VAL
+          TURNING_LEFT
 ))
