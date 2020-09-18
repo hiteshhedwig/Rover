@@ -24,5 +24,5 @@ Competed in Indian Rover Challange and secured 7th rank among 32 teams from 5 co
 - OpenCV
 
 # Demo of rock detection:
-![img](src/rock.jpg)
-![img](src/rock1.jpg)
+![img](src/rock.png)
+![img](src/rock1.png)
