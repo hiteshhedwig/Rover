@@ -1,4 +1,4 @@
-# This is Official Repository of Inferno DTU  
+# This is an Official Repository of Inferno DTU  
 Team built mars protoype rover (2018, August - 2019, January)
 
 ![img](src/inferno.jpg)
@@ -22,3 +22,7 @@ Competed in Indian Rover Challange and secured 7th rank among 32 teams from 5 co
 - Arduino
 - Raspberry Pi
 - OpenCV
+
+# Demo of rock detection:
+![img](src/rock.jpg)
+![img](src/rock1.jpg)
