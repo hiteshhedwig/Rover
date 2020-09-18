@@ -3,9 +3,6 @@ Team built mars protoype rover (2018, August - 2019, January)
 
 ![img](src/inferno.jpg)
 
-## Team secured 3rd rank in system review acceptance
-![img1](src/system review.png)
-
 
 ## Team secured 7th rank in Overall competition
 Competed in Indian Rover Challange and secured 7th rank among 32 teams from 5 countries.
